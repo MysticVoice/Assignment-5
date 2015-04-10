@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AllMedia()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ AllMedia\r\n
+comment1.params=collection
+comment1.target=void\ addMedia(Media)
+comment1.text=\r\n\ add\ media\r\n
+numComments=2

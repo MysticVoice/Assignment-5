@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=artist\ dateLastPlayed\ timesPlayed\ title\ minutes\ seconds
+comment0.target=Music(java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ double,\ double)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Music\r\n
+comment1.params=
+comment1.target=java.lang.String\ getDateLastPlayed()
+comment1.text=\r\n\ returns\ the\ date\ this\ sog\ was\ last\ played\r\n\ @return\ the\ dateLastPlayed\r\n
+comment2.params=
+comment2.target=int\ geTimesPlayed()
+comment2.text=\r\n\ returns\ artist\r\n\ @return\ the\ artist\r\n
+comment3.params=
+comment3.target=java.lang.String\ getArtist()
+comment3.text=\r\n\ returns\ artist\r\n\ @return\ the\ artist\r\n
+comment4.params=timesPlayed
+comment4.target=void\ setTimesPlayed(int)
+comment4.text=\r\n\ change\ times\ played\r\n
+comment5.params=artist
+comment5.target=void\ setArtist(java.lang.String)
+comment5.text=\r\n\ change\ artist\r\n
+comment6.params=dateLastPlayed
+comment6.target=void\ setDateLastPlayed(java.lang.String)
+comment6.text=\r\n\ change\ dateLastPlayed\r\n
+numComments=7
