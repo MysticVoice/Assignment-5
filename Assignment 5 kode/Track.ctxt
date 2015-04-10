@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=title
+comment0.target=Track(java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Track\r\n
+comment1.params=
+comment1.target=Track()
+comment2.params=
+comment2.target=java.lang.String\ getTitle()
+comment2.text=\r\n\ Gets\ the\ title\ of\ the\ track\r\n
+numComments=3
