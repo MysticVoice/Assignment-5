@@ -7,13 +7,13 @@ import java.util.ArrayList;
  */
 public class Medium
 {
-    protected Tracks tracks;
+    
 
     /**
      * Constructor for objects of class Medium
      */
     public Medium()
     {
-        tracks = new Tracks();
+        
     }
 }

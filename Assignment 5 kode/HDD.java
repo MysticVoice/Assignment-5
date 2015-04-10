@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class HDD here.
  * 
@@ -8,16 +8,13 @@
 public class HDD extends Medium
 {
     private String name;
-    private String path;
-    private int filesize;
-    
+    private ArrayList<FileOnHDD> files;
     /**
      * Constructor for objects of class HDD
      */
-    public HDD(String name, String path, int filesize)
+    public HDD(String name)
     {
         this.name = name;
-        this.path = path;
-        this.filesize = filesize;
+        files = new ArrayList<FileOnHDD>();
     }
 }

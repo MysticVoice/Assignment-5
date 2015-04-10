@@ -43,6 +43,18 @@ public class Register
         mediumsList.add(tapes);
     }
     
+//     private void createTape()
+//     {
+//         Mediums tapes = mediumsList.get(2);
+//         tapes.newTape();
+//     }
+//     
+//     private void createHarddisk()
+//     {
+//         Mediums harddisks = mediumsList.get(1);
+//         harddisks.newHarddisk();
+//     }
+    
     private void createCD(String album, String artist,int year, String label)
     {
         Mediums cds = mediumsList.get(0);
