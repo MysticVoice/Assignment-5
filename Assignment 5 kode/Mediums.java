@@ -21,4 +21,9 @@ public class Mediums
     {
         mediums.add(medium);
     }
+    
+    public Medium getMedium(int index)
+    {
+        return mediums.get(index);
+    }
 }

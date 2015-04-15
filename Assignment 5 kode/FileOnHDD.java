@@ -18,5 +18,7 @@ public class FileOnHDD
     public FileOnHDD(Track track,String fileName, String path)
     {
         this.track = track; 
+        this.fileName = fileName;
+        this.path = path;
     }
 }

@@ -18,4 +18,12 @@ public class HDD extends Medium
         files = new ArrayList<FileOnHDD>();
         digital=true;
     }
+    
+    /**
+     * adds a file to files
+     */
+    public void addFile(FileOnHDD file)
+    {
+        files.add(file);
+    }
 }
