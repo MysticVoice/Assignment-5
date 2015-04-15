@@ -13,7 +13,7 @@ public class SoundEffect extends AudioTrack
     /**
      * Constructor for objects of class SoundEffect
      */
-    public SoundEffect(String description, String title, double minutes, double seconds)
+    public SoundEffect(String description, String title, long minutes, long seconds)
     {
         super(title, minutes, seconds);
         this.description = description;

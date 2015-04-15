@@ -8,23 +8,48 @@ import java.time.Duration;
 public class AudioTrack
 {
     private String title;
-    private String duration;
-   
+    private Duration duration;
+
     /**
      * Constructor for objects of class AudioTracks
      */
-    public AudioTrack(String title, double minutes, double seconds)
+    public AudioTrack(String title, long minutes, long seconds)
     {
         this.title = title;
-        this.duration = minutes + ":" + seconds;
-       
+        this.duration = setDuration(minutes, seconds);
+
     }
-    
-    /**
+
+     // accessors
+     
+        public String getTitle()
+    {
+        return title;
+    } 
+    public Duration getDuration()
+    {
+        return duration;
+    }
+     /**
      * prints info
      */
     private void printinfo()
     {
         System.out.println();
     }
+    
+    
+     //mutators
+      protected Duration setDuration( long minutes, long seconds)
+    {
+        Duration time = this.duration.ofSeconds(seconds).plusMinutes(minutes);
+        return time;
+    }
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+    
+   
+
 }

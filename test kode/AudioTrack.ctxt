@@ -1,8 +1,16 @@
 #BlueJ class context
 comment0.params=title\ minutes\ seconds
-comment0.target=AudioTrack(java.lang.String,\ double,\ double)
+comment0.target=AudioTrack(java.lang.String,\ long,\ long)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ AudioTracks\r\n
 comment1.params=
-comment1.target=void\ printinfo()
-comment1.text=\r\n\ prints\ info\r\n
-numComments=2
+comment1.target=java.lang.String\ getTitle()
+comment2.params=
+comment2.target=java.time.Duration\ getDuration()
+comment3.params=
+comment3.target=void\ printinfo()
+comment3.text=\r\n\ prints\ info\r\n
+comment4.params=minutes\ seconds
+comment4.target=java.time.Duration\ setDuration(long,\ long)
+comment5.params=title
+comment5.target=void\ setTitle(java.lang.String)
+numComments=6

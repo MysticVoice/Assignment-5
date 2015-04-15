@@ -16,7 +16,7 @@ public class News extends AudioTrack
     /**
      * Constructor for objects of class News
      */
-    public News(String newsStory, String dateMade, String dateBroadcasted, String journalist, String title, double minutes, double seconds)
+    public News(String newsStory, String dateMade, String dateBroadcasted, String journalist, String title, long minutes, long seconds)
     {
         super(title, minutes, seconds);
         this.newsStory = newsStory;
@@ -24,5 +24,71 @@ public class News extends AudioTrack
         this.dateBroadcasted = dateBroadcasted;
         this.journalist = journalist;
        
+    }
+    
+    // accessors
+    
+    /**
+     * returns the newsStory 
+     * @return the newsStory
+     */
+    public String getNewsStory()
+    {
+        return newsStory;
+    }
+    /**
+     * returns artist
+     * @return the artist
+     */
+    public String getDateMade()
+    {
+        return dateMade;
+    }
+    /**
+     * returns dateBroadcasted
+     * @return the dateBroadcasted
+     */
+    public String getDateBroadcasted()
+    {
+        return dateBroadcasted;
+    }
+    /**
+     * returns the journalist 
+     * @return the journalist
+     */
+    public String getJournalist()
+    {
+        return journalist;
+    }
+    
+    //mutators
+    
+    /**
+     * change times played
+     */
+    public void setNewsStory(String newsStory)
+    {
+        this.newsStory = newsStory;
+    }
+    /**
+     * change dateMade
+     */
+    public void dateMade(String dateMade)
+    {
+        this.dateMade = dateMade;
+    }
+    /**
+     * change dateBroadcasted
+     */
+    public void setDateBroadcasted(String dateBroadcasted)
+    {
+        this.dateBroadcasted = dateBroadcasted;
+    }
+     /**
+     * change dateBroadcasted
+     */
+    public void setJournalist(String journalist)
+    {
+        this.journalist = journalist;
     }
 }

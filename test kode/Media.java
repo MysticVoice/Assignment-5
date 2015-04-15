@@ -1,4 +1,6 @@
+import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Iterator;
 /**
  * Write a description of class Media here.
  * 
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 public class Media
 {
    //protected ArrayList<AudioTracks> tracks;
-   private AudioTracks list;
+   protected AudioTracks list;
    private String title;
     /**
      * Constructor for objects of class Media
@@ -24,5 +26,17 @@ public class Media
     {
         this.list.addTrack(track);
     }
+    
+   public String getTitle()
+   {
+       return title;
+    }
+    
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+        
+        
     
 }

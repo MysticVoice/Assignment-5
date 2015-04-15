@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=artist\ dateLastPlayed\ timesPlayed\ title\ minutes\ seconds
-comment0.target=Music(java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ double,\ double)
+comment0.target=Music(java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ long,\ long)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Music\r\n
 comment1.params=
 comment1.target=java.lang.String\ getDateLastPlayed()

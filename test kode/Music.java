@@ -15,7 +15,7 @@ public class Music extends AudioTrack
     /**
      * Constructor for objects of class Music
      */
-    public Music(String artist, String dateLastPlayed, int timesPlayed, String title, double minutes, double seconds)
+    public Music(String artist, String dateLastPlayed, int timesPlayed, String title, long minutes, long seconds)
     {
        super(title, minutes, seconds);
        this.artist = artist;
