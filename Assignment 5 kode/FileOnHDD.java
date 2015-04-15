@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class FileOnHDD
 {
-    private Tracks tracks;
+    private Track track;
     private String fileName;
     private String path;
     private int filesize;
@@ -15,8 +15,8 @@ public class FileOnHDD
     /**
      * Constructor for objects of class FileOnHDD
      */
-    public FileOnHDD()
+    public FileOnHDD(Track track,String fileName, String path)
     {
-        tracks = new Tracks();
+        this.track = track; 
     }
 }

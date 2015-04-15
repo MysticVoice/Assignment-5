@@ -28,11 +28,53 @@ public class Register
         createTape(false);
     }
     
+    
+    
+    
+    
+    
+    
     private MusicTrack createMusicTrack(String title, long min, long sec)
     {
         MusicTrack track = new MusicTrack(title, min, sec);
         return track;
     }
+    
+    private AdvertisingJingle createAdvJingle(String title, long min, long sec)
+    {
+        AdvertisingJingle track = new AdvertisingJingle(title, min, sec);
+        return track;
+    }
+    
+    private News createNews(String title, long min, long sec)
+    {
+        News track = new News(title, min, sec);
+        return track;
+    }
+    
+    private SoundEffect createSoundEffect(String title, long min, long sec)
+    {
+        SoundEffect track = new SoundEffect(title, min, sec);
+        return track;
+    }
+    
+    
+    
+    
+    
+    
+    
+//     private FileOnHDD musicTrackOnHDD()
+//     {
+//         Mediums harddisks = mediumsList.get(1);
+//         //harddisks
+//         //createMusicTrack();
+//     }
+    
+    
+    
+    
+    
     
     private void createMediumLists()
     {
