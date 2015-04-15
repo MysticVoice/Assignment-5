@@ -1,10 +1,5 @@
 import java.time.Duration;
 import java.io.File;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioFileFormat;
-import javax.sound.sampled.UnsupportedAudioFileException;
 /**
  * Write a description of class Track here.
  * 
@@ -15,17 +10,26 @@ public class Track
 {
     // instance variables - replace the example below with your own
     private String title;
+    protected Duration time;
 
     /**
      * Constructor for objects of class Track
      */
-    public Track(String title)
+    public Track(String title, long sec, long min)
     {
+        time = duration(min,sec);
         this.title = title;
     }
 
     public Track()
     {}
+    
+    
+    protected Duration duration(long min, long sec)
+    { 
+        Duration dur = Duration.ofSeconds(sec).plusMinutes(min);
+        return dur;
+    }
     
     /**
      * Gets the title of the track

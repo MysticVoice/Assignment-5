@@ -10,8 +10,8 @@ public class MusicTrack extends Track
     /**
      * Constructor for objects of class MusicTrack
      */
-    public MusicTrack(String title)
+    public MusicTrack(String title, long min, long sec)
     {
-        super(title);
+        super(title, min, sec);
     }
 }

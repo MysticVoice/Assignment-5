@@ -7,11 +7,11 @@
  */
 public class Tape extends ExternalMedium
 {
-    private boolean digital;
     /**
      * Constructor for objects of class Tape
      */
-    public Tape()
+    public Tape(boolean digital)
     {
+        this.digital=digital;
     }
 }

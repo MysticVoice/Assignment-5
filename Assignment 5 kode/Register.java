@@ -2,15 +2,15 @@ import java.util.ArrayList;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 /**
- * Write a description of class Radio here.
+ * A controller class that controlls the content of other classes
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Fredrik M. Valderhaug) 
+ * @version (1.0)
  */
 public class Register
 {
     private ArrayList<Mediums> mediumsList;
-    
+
     /**
      * Constructor for objects of class Radio
      */
@@ -19,17 +19,19 @@ public class Register
         mediumsList = new ArrayList<Mediums>();
         fillRegister();
     }
-    
+
     private void fillRegister()
     {
         createMediumLists();
-        createCD("Fiesty Cupcakes","The Slightly Moldy Cheeses", 2015, "Very obscure");
+        createCD("Darkside", "Some artist", 1990, "notsomuch");
+        createHarddisk("The D");
+        createTape(false);
     }
     
-    private void addMedium(Medium medium)
+    private MusicTrack createMusicTrack(String title, long min, long sec)
     {
-        Mediums mediums=mediumsList.get(0);
-        mediums.addMedium(medium);
+        MusicTrack track = new MusicTrack(title, min, sec);
+        return track;
     }
     
     private void createMediumLists()
@@ -42,22 +44,25 @@ public class Register
         mediumsList.add(harddisks);
         mediumsList.add(tapes);
     }
-    
-//     private void createTape()
-//     {
-//         Mediums tapes = mediumsList.get(2);
-//         tapes.newTape();
-//     }
-//     
-//     private void createHarddisk()
-//     {
-//         Mediums harddisks = mediumsList.get(1);
-//         harddisks.newHarddisk();
-//     }
-    
+
+    private void createTape(boolean digital)
+    {
+        Mediums tapes = mediumsList.get(2);
+        Tape tape = new Tape(digital);
+        tapes.addMedium(tape);
+    }
+
+    private void createHarddisk(String name)
+    {
+        Mediums harddisks = mediumsList.get(1);
+        HDD harddisk = new HDD(name);
+        harddisks.addMedium(harddisk);
+    }
+
     private void createCD(String album, String artist,int year, String label)
     {
         Mediums cds = mediumsList.get(0);
-        cds.newCD(album,artist,year,label);
+        CD cd = new CD(album,artist,year,label);
+        cds.addMedium(cd);
     }
 }

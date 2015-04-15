@@ -10,8 +10,8 @@ public class SoundEffect extends Track
     /**
      * Constructor for objects of class SoundEffect
      */
-    public SoundEffect(String title)
+    public SoundEffect(String title, long min, long sec)
     {
-        super(title);
+        super(title, min, sec);
     }
 }

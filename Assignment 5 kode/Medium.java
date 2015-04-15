@@ -8,11 +8,15 @@ import java.util.ArrayList;
 public class Medium
 {
     
-
+    protected boolean digital;
     /**
      * Constructor for objects of class Medium
      */
     public Medium()
+    {
+    }
+    
+    public void addTrack(Track track)
     {
         
     }

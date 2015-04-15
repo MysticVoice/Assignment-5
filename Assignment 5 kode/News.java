@@ -10,8 +10,8 @@ public class News extends Track
     /**
      * Constructor for objects of class News
      */
-    public News(String title)
+    public News(String title, long min, long sec)
     {
-        super(title);
+        super(title,min,sec);
     }
 }

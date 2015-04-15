@@ -4,6 +4,4 @@ comment0.target=Mediums()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Mediums\r\n
 comment1.params=medium
 comment1.target=void\ addMedium(Medium)
-comment2.params=album\ artist\ year\ label
-comment2.target=void\ newCD(java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
-numComments=3
+numComments=2

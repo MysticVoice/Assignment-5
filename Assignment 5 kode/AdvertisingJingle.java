@@ -10,8 +10,8 @@ public class AdvertisingJingle extends Track
     /**
      * Constructor for objects of class AdvertisingJingle
      */
-    public AdvertisingJingle(String title)
+    public AdvertisingJingle(String title, long min, long sec)
     {
-        super(title);
+        super(title, min, sec);
     }
 }

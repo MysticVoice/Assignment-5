@@ -16,5 +16,6 @@ public class HDD extends Medium
     {
         this.name = name;
         files = new ArrayList<FileOnHDD>();
+        digital=true;
     }
 }

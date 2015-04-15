@@ -16,11 +16,11 @@ public class Tracks
     public Tracks()
     {
         tracks = new ArrayList<Track>();
-        
     }
     
     public void addTrack(Track track)
     {
         tracks.add(track);
     }
+    
 }

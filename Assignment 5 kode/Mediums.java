@@ -21,10 +21,4 @@ public class Mediums
     {
         mediums.add(medium);
     }
-    
-    public void newCD(String album,String artist,int year,String label)
-    {
-        CD cd = new CD(album, artist, year, label);
-        addMedium(cd);
-    }
 }

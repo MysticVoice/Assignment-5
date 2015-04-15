@@ -16,4 +16,9 @@ public class ExternalMedium extends Medium
     {
         tracks = new Tracks();
     }
+    
+    public void addTrack(Track track)
+    {
+        tracks.addTrack(track);
+    }
 }
