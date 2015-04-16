@@ -34,7 +34,7 @@ public class MainWindow extends JFrame
     {
         super("Gloppen NærRadio");
         makeFrame();
-        
+        makeMenuBar();
     }
 
     
@@ -54,7 +54,7 @@ public class MainWindow extends JFrame
             aCDButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
-                    makeFrame();
+                   
                     addNewCD();
                    
                 }
@@ -92,7 +92,8 @@ public class MainWindow extends JFrame
             aTrackButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
-                   
+                     makeTextField();
+                    
                 }
             });
             toolBar.add(aTrackButton);
@@ -101,7 +102,7 @@ public class MainWindow extends JFrame
             rTrackButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
-                   
+                 
                 }
             });
             toolBar.add(rTrackButton);
@@ -114,6 +115,16 @@ public class MainWindow extends JFrame
                 }
             });
             toolBar.add(okButton);
+            
+            JButton backButton = new JButton("Back");
+            backButton.addActionListener(new ActionListener() {
+                public void actionPerformed( ActionEvent event) 
+                {
+                  
+                   
+                }
+            });
+            toolBar.add(backButton);
         }
                
         JPanel statusBar = new JPanel();
@@ -131,10 +142,10 @@ public class MainWindow extends JFrame
         contentPane.add( statusBar, BorderLayout.SOUTH );
         
         makeMediumPane();
-        makeTextField();
+        /*makeTextField();
         makeMenuBar();
         makeList();
-        
+        */
 
         this.pack();
         this.setVisible(true);
@@ -170,7 +181,7 @@ public class MainWindow extends JFrame
             mediumPane.add( new JButton("HDD"));
             
         }
-        contentPane.add( mediumPane, BorderLayout.EAST);
+        contentPane.add( mediumPane, BorderLayout.NORTH);
     }
     
     private void makeTextField()
@@ -178,16 +189,21 @@ public class MainWindow extends JFrame
        JPanel contentPane = (JPanel) this.getContentPane();
        JPanel textPane = new JPanel();
         {
-            textPane.setLayout(new BoxLayout(textPane, BoxLayout.Y_AXIS));
+            textPane.setLayout(new GridLayout(6,2));
             
             
-            textPane.add(new JLabel("Title:"));            
-            textField = new JTextField("", 8);
+            textPane.add(new JLabel("Title:")); 
+            textPane.add(new JLabel(""));
+            textField = new JTextField("");
             textPane.add(textField);
+            textPane.add(new JLabel(""));
             textPane.add(new JLabel("Artist:"));
-            textPane.add(new JTextField("", 1));
+            textPane.add(new JLabel(""));
+            textPane.add(new JTextField(""));
+            textPane.add(new JLabel(""));
             textPane.add(new JLabel("Duration:"));
-            textPane.add(new JTextField("", 8));
+            textPane.add(new JLabel(""));
+            textPane.add(new JTextField(""));
                  
 
 
@@ -256,15 +272,17 @@ public class MainWindow extends JFrame
     private void addNewCD()
     {
        JPanel contentPane = (JPanel) this.getContentPane();
+        
        JPanel textPane = new JPanel();
         {
-            textPane.setLayout(new GridLayout(3,1));
+            textPane.setLayout(new GridLayout(3,2));
             
-            textPane.add(new JLabel("CD name"));            
+            textPane.add(new JLabel(""));
+            textPane.add(new JLabel(""));
+            textPane.add(new JLabel("CD name"));
+            textPane.add(new JLabel(""));
             textField = new JTextField("");
             textPane.add(textField);
-            
-            
 
             
         }  
@@ -286,8 +304,7 @@ public class MainWindow extends JFrame
                     "About Globben NærRadio", 
                     JOptionPane.INFORMATION_MESSAGE);
     }
-    
-    
+ 
 
 }
 

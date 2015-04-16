@@ -2,18 +2,31 @@
 objectbench.height=100
 objectbench.width=363
 package.editor.height=400
+<<<<<<< Updated upstream
 package.editor.width=570
 package.editor.x=14
 package.editor.y=216
+=======
+package.editor.width=560
+package.editor.x=1142
+package.editor.y=44
+>>>>>>> Stashed changes
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
+<<<<<<< Updated upstream
 target1.editor.height=860
 target1.editor.width=800
 target1.editor.x=0
 target1.editor.y=0
+=======
+target1.editor.height=955
+target1.editor.width=900
+target1.editor.x=207
+target1.editor.y=23
+>>>>>>> Stashed changes
 target1.height=50
 target1.name=MainWindow
 target1.naviview.expanded=true
