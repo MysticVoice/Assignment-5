@@ -4,6 +4,8 @@ import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.border.*;
 
+
+
 /**
  * Write a description of class MainWindow here.
  * 
@@ -158,14 +160,15 @@ public class MainWindow extends JFrame
         {
             textPane.setLayout(new GridLayout(3,1));
             
+            
             textPane.add(new JLabel("Title:"));            
-            textField = new JTextField("");
+            textField = new JTextField("", 8);
             textPane.add(textField);
             textPane.add(new JLabel("Artist:"));
-            textPane.add(new JTextField(""));
+            textPane.add(new JTextField("", 1));
             textPane.add(new JLabel("Duration:"));
-            textPane.add(new JTextField(""));
-            
+            textPane.add(new JTextField("", 8));
+                 
 
             
         }  
