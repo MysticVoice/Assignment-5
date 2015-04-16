@@ -17,6 +17,10 @@ public class MainWindow extends JFrame
      private static final String VERSION = "Version 1.0";
     private JTextField textField;
     private JLabel statusText;
+    
+    private static String [] colornames = {"black" , "yello"};
+    private static Color[] colors = {Color.BLACK, Color.YELLOW};
+    private JList list;
    
     private JFrame frame;
     
@@ -129,11 +133,27 @@ public class MainWindow extends JFrame
         makeMediumPane();
         makeTextField();
         makeMenuBar();
+        makeList();
         
 
         this.pack();
         this.setVisible(true);
 
+    }
+    /**
+     * Content pane to list mediums
+     */
+    private void makeList()
+    {
+     JPanel contentPane = (JPanel) this.getContentPane();
+       
+       list = new JList(colors);
+       list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+       add(new JScrollPane(list));
+       this.setVisible(true);
+       
+       
+        contentPane.add( list, BorderLayout.EAST);
     }
     
     private void makeMediumPane()
