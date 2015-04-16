@@ -37,7 +37,7 @@ public class MainWindow extends JFrame
        
         JPanel contentPane = (JPanel) this.getContentPane();
        
-        //contentPane.setLayout(new BorderLayout());
+        contentPane.setLayout(new BorderLayout());
 
         JPanel toolBar = new JPanel();
         {
@@ -49,7 +49,7 @@ public class MainWindow extends JFrame
                 public void actionPerformed( ActionEvent event) 
                 {
                     makeFrame();
-                    addCDButton();
+                    addNewCD();
                    
                 }
             });
@@ -148,7 +148,7 @@ public class MainWindow extends JFrame
             mediumPane.add( new JButton("HDD"));
             
         }
-        contentPane.add( mediumPane, BorderLayout.NORTH);
+        contentPane.add( mediumPane, BorderLayout.EAST);
     }
     
     private void makeTextField()
@@ -156,7 +156,7 @@ public class MainWindow extends JFrame
        JPanel contentPane = (JPanel) this.getContentPane();
        JPanel textPane = new JPanel();
         {
-            textPane.setLayout(new GridLayout(3,1));
+            textPane.setLayout(new BoxLayout(textPane, BoxLayout.Y_AXIS));
             
             textPane.add(new JLabel("Title:"));            
             textField = new JTextField("");
@@ -167,10 +167,10 @@ public class MainWindow extends JFrame
             textPane.add(new JTextField(""));
             
 
-            
+
         }  
         contentPane.add( textPane, BorderLayout.CENTER);
-                    
+                           
     }
     
      private void makeMenuBar()
@@ -230,7 +230,7 @@ public class MainWindow extends JFrame
         
     
     
-    private void addCDButton()
+    private void addNewCD()
     {
        JPanel contentPane = (JPanel) this.getContentPane();
        JPanel textPane = new JPanel();
