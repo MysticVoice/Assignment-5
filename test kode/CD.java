@@ -15,7 +15,7 @@ public class CD extends Physical
     /**
      * Constructor for objects of class CD
      */
-    public CD(String title, String artist, String label, int year, int min, int sec)
+    public CD(String title, String artist, String label, int year)
     {
        super(title);
        this.artist = artist;

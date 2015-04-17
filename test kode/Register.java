@@ -9,7 +9,7 @@ public class Register
 {
     // instance variables - replace the example below with your own
     private AllMedia star;
-    private Media cd;
+
     /**
      * Constructor for objects of class Register
      */
@@ -17,27 +17,14 @@ public class Register
     {
         // initialise instance variables
         star = new AllMedia();
-        cd = makecd();
 
     }
     public Media makecd()
     {
-        CD cd = new CD("title", "artist", "label", 1, 1, 11);
+        CD cd = new CD("title", "artist", "label", 1992);
         return cd;
     }
 
-    public void fillAllMedia()
-    {
-        star.addMedia(cd);
-        star.addMedia(new Tape("titel", "digital"));
-
-    }
-    public void styggfill(String description, String title, long minutes, long seconds)
-    {
-        this.fillAllMedia();
-
-        cd.addTrack(this.SoundEffect(description, title, minutes, seconds));
-    }
 
     public AudioTrack SoundEffect(String description, String title, long minutes, long seconds)
     {
@@ -66,7 +53,7 @@ public class Register
     public void fillregister()
     {
        // AllMedia allMedia1 = new AllMedia();
-        CD cD1 = new CD("", "", "", 1, 1, 1);
+        CD cD1 = new CD("", "", "", 1992);
         Tape tape1 = new Tape("", "");
         Music music1 = new Music("", "", 1, "", 1, 1);
         AdvertisingJingle advertis1 = new AdvertisingJingle("", "", "", 1, 1);

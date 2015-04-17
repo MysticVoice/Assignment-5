@@ -9,9 +9,9 @@ import java.util.Iterator;
  */
 public class Media
 {
-   //protected ArrayList<AudioTracks> tracks;
-   protected AudioTracks list;
-   private String title;
+    //protected ArrayList<AudioTracks> tracks;
+    protected AudioTracks list;
+    private String title;
     /**
      * Constructor for objects of class Media
      */
@@ -22,21 +22,26 @@ public class Media
         //tracks.add(list);
         this.title = title;
     }
-      public void addTrack(AudioTrack track)
+
+    public void addTrack(AudioTrack track)
     {
         this.list.addTrack(track);
     }
-    
-   public String getTitle()
-   {
-       return title;
+
+    public String getTitle()
+    {
+        return title;
     }
-    
+    public Duration getTime()
+    {
+       return list.gettime();
+    }
     public void setTitle(String title)
     {
         this.title = title;
     }
-        
-        
-    
+    public Duration getDtime()
+    {
+       return list.getTime();
+    }
 }
