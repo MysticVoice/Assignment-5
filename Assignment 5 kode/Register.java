@@ -44,6 +44,8 @@ public class Register
         cd.addTrack(createAdvJingle("dude", 3, 12, "death in a box", "a very large squirrel"));
         cd.addTrack(createAdvJingle("anedaddd", 3, 11, "natural disasters", "Mad cows"));
         cd.addTrack(createAdvJingle("abhdakjmwdk", 2, 25, "Three skittles", "Cats"));
+        
+        
         // new medium
         cd = createCD("something", "no idea", 8989, "another thing");
         // tracks
@@ -104,73 +106,10 @@ public class Register
         return result;
     }
     
-//     /**
-//      * creates a music track for hdd
-//      */
-//     private FileOnHDD musicTrackHDD(String title, long min, long sec,String path)
-//     {
-//         FileOnHDD result;
-//         Mediums harddisks = mediumsList.get(1);
-//         Medium harddisk = harddisks.getMedium(0);
-//         MusicTrack track = createMusicTrack(title,min,sec);
-//         String fileName = title + ".mp3";
-//         FileOnHDD file = createFileOnHDD(track,fileName,path);
-//         ((HDD)harddisk).addFile(file);
-//         result=file;
-//         return result;
-//     }
-//     
-//     /**
-//      * creates an advertising jingle for hdd
-//      */
-//     private FileOnHDD advJingleHDD(String title, long min, long sec,String path)
-//     {
-//         FileOnHDD result;
-//         Mediums harddisks = mediumsList.get(1);
-//         Medium harddisk = harddisks.getMedium(0);
-//         AdvertisingJingle track = createAdvJingle(title,min,sec);
-//         String fileName = title + ".mp3";
-//         FileOnHDD file = createFileOnHDD(track,fileName,path);
-//         ((HDD)harddisk).addFile(file);
-//         result=file;
-//         return result;
-//     }
-//     
-//     /**
-//      * creates news for hdd
-//      */
-//     private FileOnHDD newsHDD(String title, long min, long sec,String path)
-//     {
-//         FileOnHDD result;
-//         Mediums harddisks = mediumsList.get(1);
-//         Medium harddisk = harddisks.getMedium(0);
-//         News track = createNews(title,min,sec);
-//         String fileName = title + ".mp3";
-//         FileOnHDD file = createFileOnHDD(track,fileName,path);
-//         ((HDD)harddisk).addFile(file);
-//         result=file;
-//         return result;
-//     }
-//     
-//     /**
-//      * creates sound effects for hdd
-//      */
-//     private FileOnHDD soundEffectHDD(String title, long min, long sec,String path)
-//     {
-//         FileOnHDD result;
-//         Mediums harddisks = mediumsList.get(1);
-//         Medium harddisk = harddisks.getMedium(0);
-//         SoundEffect track = createSoundEffect(title,min,sec);
-//         String fileName = title + ".mp3";
-//         FileOnHDD file = createFileOnHDD(track,fileName,path);
-//         ((HDD)harddisk).addFile(file);
-//         result=file;
-//         return result;
-//     }
-//     
-    
-    
-    
+    public ArrayList<Mediums> getMediumsList()
+    {
+        return mediumsList;
+    }
     
     /**
      * makes all medium lists

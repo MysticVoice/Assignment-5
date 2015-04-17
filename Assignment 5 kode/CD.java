@@ -22,4 +22,15 @@ public class CD extends ExternalMedium
         yearReleased = year;
         this.label = label;
     }
+    
+    public String getArtist()
+    {
+        return artist;
+    }
+    
+    public String printString()
+    {
+        String returnString = "Album: " + album + " \nArtist: " + artist + " \nYear released: " + yearReleased + " \nLabel: " + label;
+        return returnString;
+    }
 }

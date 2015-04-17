@@ -6,4 +6,6 @@ comment1.params=medium
 comment1.target=void\ addMedium(Medium)
 comment2.params=index
 comment2.target=Medium\ getMedium(int)
-numComments=3
+comment3.params=
+comment3.target=java.util.ArrayList\ getMediums()
+numComments=4

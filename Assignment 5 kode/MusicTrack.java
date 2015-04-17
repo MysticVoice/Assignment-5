@@ -17,4 +17,14 @@ public class MusicTrack extends SubTrack
         super(title, min, sec);
         this.artist = artist;
     }
+    
+    public String getArtist()
+    {
+        return artist;
+    }
+    
+    public int getTimesPlayed()
+    {
+        return timesPlayed;
+    }
 }
