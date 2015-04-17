@@ -7,17 +7,17 @@ import java.util.ArrayList;
  */
 public class Medium
 {
-    
-    protected boolean digital;
+    protected Tracks tracks;
     /**
      * Constructor for objects of class Medium
      */
     public Medium()
     {
+        tracks = new Tracks();
     }
     
     public void addTrack(Track track)
     {
-        
+        tracks.addTrack(track);
     }
 }

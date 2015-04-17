@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MusicTrack extends Track
+public class MusicTrack extends SubTrack
 {
     /**
      * Constructor for objects of class MusicTrack

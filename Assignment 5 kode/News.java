@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class News extends Track
+public class News extends SubTrack
 {
     /**
      * Constructor for objects of class News

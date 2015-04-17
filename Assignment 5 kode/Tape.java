@@ -7,6 +7,7 @@
  */
 public class Tape extends ExternalMedium
 {
+    boolean digital;
     /**
      * Constructor for objects of class Tape
      */
