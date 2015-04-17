@@ -59,9 +59,7 @@ public class MainWindow extends JFrame
              
             JButton aCDButton = new JButton("Add CD");
             aCDButton.addActionListener(new ActionListener() {
-                public void actionPerformed( ActionEvent event) 
-<<<<<<< HEAD
-                {   
+                public void actionPerformed( ActionEvent event){   
                     JButton button =(JButton) event.getSource();
                     if (button == aCDButton)
                     {
@@ -76,14 +74,9 @@ public class MainWindow extends JFrame
                         
                     //makeFrame();
                     //addNewCD();
-=======
-                {
-                   
-                    addNewCD();
->>>>>>> f2b373aa17b5280b5629e49066a647856077b19c
-                   
-                }
-            });
+                }});
+
+            
             toolBar.add(aCDButton);
             
             JButton rCDButton = new JButton("Remove CD");
@@ -167,10 +160,10 @@ public class MainWindow extends JFrame
         contentPane.add( statusBar, BorderLayout.SOUTH );
         
         makeMediumPane();
-        /*makeTextField();
+        makeTextField();
         makeMenuBar();
         makeList();
-        */
+        
 
         this.pack();
         this.setVisible(true);
@@ -249,16 +242,18 @@ public class MainWindow extends JFrame
             
             
             textPane.add(new JLabel("Title:")); 
-            textPane.add(new JLabel(""));
+            //textPane.add(new JLabel(""));
+            
             textField = new JTextField("");
             textPane.add(textField);
-            textPane.add(new JLabel(""));
+            
             textPane.add(new JLabel("Artist:"));
-            textPane.add(new JLabel(""));
+            //textPane.add(new JLabel(""));
             textPane.add(new JTextField(""));
-            textPane.add(new JLabel(""));
+            
+            //textPane.add(new JLabel(""));
             textPane.add(new JLabel("Duration:"));
-            textPane.add(new JLabel(""));
+            //textPane.add(new JLabel(""));
             textPane.add(new JTextField(""));
                  
 

@@ -3,17 +3,11 @@ comment0.params=args
 comment0.target=void\ main(java.lang.String[])
 comment1.params=
 comment1.target=MainWindow()
-<<<<<<< HEAD
-comment10.params=
-comment10.target=void\ makeList()
-comment10.text=private\ void\ makeList()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ JPanel\ contentPane\ \=\ (JPanel)\ this.getContentPane();\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ list\ \=\ new\ JList(colornames);\r\n\ \ \ \ \ \ \ list.setLayout(new\ BoxLayout(list,\ BoxLayout.X_AXIS));\r\n\ \ \ \ \ \ \ list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);\r\n\ \ \ \ \ \ \ add(new\ JScrollPane(list));\r\n\ \ \ \ \ \ \ this.setVisible(true);\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ contentPane.add(\ list,\ BorderLayout.EAST);\r\n}
-=======
 comment10.params=event
 comment10.target=void\ actionPerformed(java.awt.event.ActionEvent)
->>>>>>> f2b373aa17b5280b5629e49066a647856077b19c
 comment11.params=
 comment11.target=void\ makeList()
-comment11.text=\n\ Content\ pane\ to\ list\ mediums\n
+comment11.text=private\ void\ makeList()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ JPanel\ contentPane\ \=\ (JPanel)\ this.getContentPane();\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ list\ \=\ new\ JList(colornames);\r\n\ \ \ \ \ \ \ list.setLayout(new\ BoxLayout(list,\ BoxLayout.X_AXIS));\r\n\ \ \ \ \ \ \ list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);\r\n\ \ \ \ \ \ \ add(new\ JScrollPane(list));\r\n\ \ \ \ \ \ \ this.setVisible(true);\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ contentPane.add(\ list,\ BorderLayout.EAST);\r\n}
 comment12.params=
 comment12.target=void\ makeMediumPane()
 comment13.params=
@@ -30,7 +24,7 @@ comment18.params=
 comment18.target=void\ addNewCD()
 comment19.params=
 comment19.target=void\ quit()
-comment19.text=\n\ Quit\ function\:\ quit\ the\ application.\n
+comment19.text=\r\n\ Quit\ function\:\ quit\ the\ application.\r\n
 comment2.params=
 comment2.target=void\ makeFrame()
 comment20.params=
