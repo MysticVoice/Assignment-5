@@ -26,6 +26,7 @@ public class Media
     public void addTrack(AudioTrack track)
     {
         this.list.addTrack(track);
+        
     }
 
     public String getTitle()
@@ -34,14 +35,11 @@ public class Media
     }
     public Duration getTime()
     {
-       return list.gettime();
+       return list.getTime();
     }
     public void setTitle(String title)
     {
         this.title = title;
     }
-    public Duration getDtime()
-    {
-       return list.getTime();
-    }
+
 }

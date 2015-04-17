@@ -21,8 +21,15 @@ public class CD extends Physical
        this.artist = artist;
        this.label = label;
        this.year = year;
-      
+      this.CDDuration = getTime();
     }
+    
+    public void addTrack(AudioTrack track)
+    {
+        this.list.addTrack(track);
+        CDDuration = getTime();
+    }
+    
     
     
      /**
