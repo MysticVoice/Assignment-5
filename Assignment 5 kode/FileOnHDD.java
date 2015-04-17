@@ -1,13 +1,14 @@
 import java.util.ArrayList;
+import java.time.Duration;
 /**
  * Write a description of class FileOnHDD here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FileOnHDD
+public class FileOnHDD extends Track
 {
-    private Track track;
+    private SubTrack track;
     private String fileName;
     private String path;
     private int filesize;
@@ -15,10 +16,15 @@ public class FileOnHDD
     /**
      * Constructor for objects of class FileOnHDD
      */
-    public FileOnHDD(Track track,String fileName, String path)
+    public FileOnHDD(SubTrack track, String path)
     {
         this.track = track; 
-        this.fileName = fileName;
+        this.fileName = track.getTitle()+".mp3";
         this.path = path;
+    }
+    
+    public Duration getDuration()
+    {
+        return track.getDuration();
     }
 }

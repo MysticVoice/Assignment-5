@@ -8,22 +8,16 @@ import java.util.ArrayList;
 public class HDD extends Medium
 {
     private String name;
-    private ArrayList<FileOnHDD> files;
     /**
      * Constructor for objects of class HDD
      */
     public HDD(String name)
     {
         this.name = name;
-        files = new ArrayList<FileOnHDD>();
-        digital=true;
     }
     
-    /**
-     * adds a file to files
-     */
-    public void addFile(FileOnHDD file)
+    public void addTrack (FileOnHDD track)
     {
-        files.add(file);
+        tracks.addTrack(track);
     }
 }

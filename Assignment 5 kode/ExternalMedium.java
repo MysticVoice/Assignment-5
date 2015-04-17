@@ -8,17 +8,13 @@
 public class ExternalMedium extends Medium
 {
     private int archiveNr;
-    protected Tracks tracks;
+    
     /**
      * Constructor for objects of class AnalogMedium
      */
     public ExternalMedium()
     {
-        tracks = new Tracks();
+        
     }
     
-    public void addTrack(Track track)
-    {
-        tracks.addTrack(track);
-    }
 }

@@ -21,6 +21,5 @@ public class CD extends ExternalMedium
         this.artist = artist;
         yearReleased = year;
         this.label = label;
-        digital = false;
     }
 }

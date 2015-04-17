@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class AdvertisingJingle extends Track
+public class AdvertisingJingle extends SubTrack
 {
     /**
      * Constructor for objects of class AdvertisingJingle
