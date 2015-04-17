@@ -26,4 +26,9 @@ public class Mediums
     {
         return mediums.get(index);
     }
+    
+    public ArrayList<Medium> getMediums()
+    {
+        return mediums;
+    }
 }
