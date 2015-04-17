@@ -5,7 +5,7 @@ comment1.params=
 comment1.target=MainWindow()
 comment10.params=
 comment10.target=void\ makeList()
-comment10.text=\r\n\ Content\ pane\ to\ list\ mediums\r\n
+comment10.text=private\ void\ makeList()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ JPanel\ contentPane\ \=\ (JPanel)\ this.getContentPane();\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ list\ \=\ new\ JList(colornames);\r\n\ \ \ \ \ \ \ list.setLayout(new\ BoxLayout(list,\ BoxLayout.X_AXIS));\r\n\ \ \ \ \ \ \ list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);\r\n\ \ \ \ \ \ \ add(new\ JScrollPane(list));\r\n\ \ \ \ \ \ \ this.setVisible(true);\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ contentPane.add(\ list,\ BorderLayout.EAST);\r\n}
 comment11.params=
 comment11.target=void\ makeMediumPane()
 comment12.params=

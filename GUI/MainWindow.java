@@ -12,17 +12,21 @@ import javax.swing.border.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MainWindow extends JFrame 
+public class MainWindow extends JFrame
 {
      private static final String VERSION = "Version 1.0";
     private JTextField textField;
     private JLabel statusText;
     
-    private static String [] colornames = {"black" , "yello"};
-    private static Color[] colors = {Color.BLACK, Color.YELLOW};
+    private static String [] colornames = {"black" , "yello" , "Dole" , "Ole" , "Doffen" ,"Freeeedrik"};
+    
     private JList list;
-   
+    
+    private String labelText;           
+    
     private JFrame frame;
+    private JScrollPane listScroller;
+    private JPanel textPane, mediumPane;
     
   
     public static void main(String[] args)
@@ -33,6 +37,9 @@ public class MainWindow extends JFrame
     public MainWindow()
     {
         super("Gloppen NærRadio");
+        //listScroller = new JPanel();
+        textPane = new JPanel();
+        mediumPane = new JPanel();
         makeFrame();
         
     }
@@ -53,9 +60,21 @@ public class MainWindow extends JFrame
             JButton aCDButton = new JButton("Add CD");
             aCDButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
-                {
-                    makeFrame();
-                    addNewCD();
+                {   
+                    JButton button =(JButton) event.getSource();
+                    if (button == aCDButton)
+                    {
+                        frame.remove(listScroller);
+                        frame.remove(mediumPane);
+                        frame.remove(textPane);
+                        
+                        addNewCD();
+                        makeFrame();
+                    }
+                        
+                        
+                    //makeFrame();
+                    //addNewCD();
                    
                 }
             });
@@ -143,24 +162,55 @@ public class MainWindow extends JFrame
     /**
      * Content pane to list mediums
      */
-    private void makeList()
+    /*private void makeList()
     {
+       
      JPanel contentPane = (JPanel) this.getContentPane();
        
-       list = new JList(colors);
+       list = new JList(colornames);
+       list.setLayout(new BoxLayout(list, BoxLayout.X_AXIS));
        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
        add(new JScrollPane(list));
        this.setVisible(true);
        
        
         contentPane.add( list, BorderLayout.EAST);
+    }*/
+    
+    
+    private void makeList()
+    {   
+         list = new JList(colornames); 
+         
+        
+        
+        
+        
+        listScroller = new JScrollPane(list);
+        listScroller.setPreferredSize(new Dimension(250, 80));
+        listScroller.setAlignmentX(RIGHT_ALIGNMENT);
+        
+        
+        
+        
+        JPanel listPane = new JPanel();
+        listPane.setLayout(new BoxLayout(listPane, BoxLayout.PAGE_AXIS));
+        JLabel label = new JLabel(labelText);
+        label.setLabelFor(list);
+        listPane.add(label);
+        listPane.add(Box.createRigidArea(new Dimension(0,5)));
+        listPane.add(listScroller);
+        listPane.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        
+        Container contentPane = (JPanel) this.getContentPane();
+        contentPane.add(listPane, BorderLayout.EAST);
     }
     
     private void makeMediumPane()
     {
         
         JPanel contentPane = (JPanel) this.getContentPane();
-        JPanel mediumPane = new JPanel();
+        mediumPane = new JPanel();
         {
             
             mediumPane.setLayout(new FlowLayout());
@@ -170,13 +220,13 @@ public class MainWindow extends JFrame
             mediumPane.add( new JButton("HDD"));
             
         }
-        contentPane.add( mediumPane, BorderLayout.EAST);
+        contentPane.add( mediumPane, BorderLayout.NORTH);
     }
     
     private void makeTextField()
     {
        JPanel contentPane = (JPanel) this.getContentPane();
-       JPanel textPane = new JPanel();
+        textPane = new JPanel();
         {
             textPane.setLayout(new BoxLayout(textPane, BoxLayout.Y_AXIS));
             
