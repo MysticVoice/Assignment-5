@@ -1,5 +1,5 @@
-import java.time.Duration;
 import java.util.ArrayList;
+import java.time.Duration;
 /**
  * Write a description of class FileOnHDD here.
  * 
@@ -19,7 +19,7 @@ public class FileOnHDD extends Track
     public FileOnHDD(SubTrack track, String path)
     {
         this.track = track; 
-        this.fileName = track.getTitle() + ".mp3";
+        this.fileName = track.getTitle()+".mp3";
         this.path = path;
     }
     

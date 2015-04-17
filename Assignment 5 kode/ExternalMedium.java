@@ -8,6 +8,7 @@
 public class ExternalMedium extends Medium
 {
     private int archiveNr;
+    
     /**
      * Constructor for objects of class AnalogMedium
      */
@@ -15,4 +16,5 @@ public class ExternalMedium extends Medium
     {
         
     }
+    
 }

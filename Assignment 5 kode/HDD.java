@@ -15,4 +15,9 @@ public class HDD extends Medium
     {
         this.name = name;
     }
+    
+    public void addTrack (FileOnHDD track)
+    {
+        tracks.addTrack(track);
+    }
 }

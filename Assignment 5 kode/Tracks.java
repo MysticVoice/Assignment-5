@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.util.ArrayList;
 /**
  * Write a description of class Tracks here.
@@ -23,4 +24,13 @@ public class Tracks
         tracks.add(track);
     }
     
+    public Duration getTime()
+    {
+        Duration test = Duration.ofSeconds(0);
+        for(int i = 0; i<tracks.size(); i++)           
+        {
+            test = test.plus(tracks.get(i).getDuration());
+        }
+        return test;
+    }
 }

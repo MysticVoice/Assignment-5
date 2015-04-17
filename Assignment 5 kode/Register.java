@@ -33,22 +33,27 @@ public class Register
         HDD disk;
         Tape tape;
         
-        SubTrack track;
-        
+        SubTrack preTrack;
+        FileOnHDD track;
+        // new medium
         cd = createCD("Darkside", "Some artist", 1990, "notsomuch");
+        // tracks
         cd.addTrack(createMusicTrack("abc", 1, 10));
         cd.addTrack(createAdvJingle("ddadd", 2, 21));
         cd.addTrack(createAdvJingle("dd", 4, 10));
         cd.addTrack(createAdvJingle("dude", 3, 12));
         cd.addTrack(createAdvJingle("anedaddd", 3, 11));
         cd.addTrack(createAdvJingle("abhdakjmwdk", 2, 25));
-        
+        // new medium
         cd = createCD("something", "no idea", 8989, "another thing");
+        // tracks
         cd.addTrack(createMusicTrack("abcd", 12, 13));
-        
+        // new medium
         disk = createHarddisk("the C");
-        track = createMusicTrack("ddsa",2,54);
-        disk.addTrack(createFileOnHDD(track,"C:'\'Users'\'Fredrik'\'Documents'\'GitHub'\'Assignment-5'\'Assignment 5 kode"));
+        // tracks
+        preTrack = createMusicTrack("akljdj", 5, 5);
+        track = createFileOnHDD(preTrack, "C:'\'Users'\'Fredrik'\'Documents'\'GitHub'\'Assignment-5'\'Assignment 5 kode");
+        disk.addTrack(track);
     }
     
     
@@ -89,17 +94,6 @@ public class Register
     }
     
     
-    
-    /**
-     * adds an existing track the first harddisk
-     */
-    private void addTrackToHDD(SubTrack track, String path)
-    {
-        Mediums harddisks = mediumsList.get(1);
-        Medium harddisk = harddisks.getMedium(0);
-        createFileOnHDD(track,path);
-    }
-    
     /**
      * creates a file for harddisk storage
      */
@@ -120,7 +114,7 @@ public class Register
 //         Medium harddisk = harddisks.getMedium(0);
 //         MusicTrack track = createMusicTrack(title,min,sec);
 //         String fileName = title + ".mp3";
-//         FileOnHDD file = createFileOnHDD(track,path);
+//         FileOnHDD file = createFileOnHDD(track,fileName,path);
 //         ((HDD)harddisk).addFile(file);
 //         result=file;
 //         return result;
@@ -173,7 +167,7 @@ public class Register
 //         result=file;
 //         return result;
 //     }
-    
+//     
     
     
     
