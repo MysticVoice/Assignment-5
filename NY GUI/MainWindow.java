@@ -22,11 +22,14 @@ public class MainWindow extends JFrame
     
     private JList list;
     
-    private String labelText;           
+    private String labelText;   
+    
+    
+    private JButton aCDButton, rCDButton, aTapeButton, rTapeButton, aTrackButton, rTrackButton, okButton, backButton;
     
     private JFrame frame;
     private JScrollPane listScroller;
-    private JPanel textPane, mediumPane;
+    private JPanel textPane, mediumPane, toolBar;
     
   
     public static void main(String[] args)
@@ -37,10 +40,27 @@ public class MainWindow extends JFrame
     public MainWindow()
     {
         super("Gloppen NærRadio");
-        //listScroller = new JPanel();
+       
+        
+        makeFrame();
+        
+        //textPane = new JPanel;
+        /*aCDButton = new JButton();
+        rCDButton = new JButton();
+        aTapeButton = new JButton();
+        rTapeButton = new JButton();
+        aTrackButton = new JButton();
+        rTrackButton = new JButton();
+        okButton = new JButton();
+        backButton = new JButton();*/
+        
+        
+        listScroller = new JScrollPane();
+        
+        
         textPane = new JPanel();
         mediumPane = new JPanel();
-        makeFrame();
+       
         makeMenuBar();
     }
 
@@ -52,34 +72,37 @@ public class MainWindow extends JFrame
        
         contentPane.setLayout(new BorderLayout());
 
-        JPanel toolBar = new JPanel();
+        toolBar = new JPanel();
         {
             
             toolBar.setLayout(new GridLayout(4,2));
              
-            JButton aCDButton = new JButton("Add CD");
+            aCDButton = new JButton("Add CD");
             aCDButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event){   
                     JButton button =(JButton) event.getSource();
                     if (button == aCDButton)
                     {
-                        frame.remove(listScroller);
-                        frame.remove(mediumPane);
-                        frame.remove(textPane);
-                        
+                        contentPane.remove(textPane);
+                                                            
+                                            
+                       
                         addNewCD();
-                        makeFrame();
+                        
+                          
+                        
+                       
+                        
                     }
                         
                         
-                    //makeFrame();
-                    //addNewCD();
+                    
                 }});
 
             
             toolBar.add(aCDButton);
             
-            JButton rCDButton = new JButton("Remove CD");
+             rCDButton = new JButton("Remove CD");
             rCDButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
@@ -88,7 +111,7 @@ public class MainWindow extends JFrame
             });
             toolBar.add(rCDButton);
             
-            JButton aTapeButton = new JButton("Add Tape");
+             aTapeButton = new JButton("Add Tape");
             aTapeButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
@@ -97,7 +120,7 @@ public class MainWindow extends JFrame
             });
             toolBar.add(aTapeButton);
             
-            JButton rTapeButton = new JButton("Remove Tape");
+             rTapeButton = new JButton("Remove Tape");
             rTapeButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
@@ -106,7 +129,7 @@ public class MainWindow extends JFrame
             });
             toolBar.add(rTapeButton);
             
-            JButton aTrackButton = new JButton("Add Track");
+             aTrackButton = new JButton("Add Track");
             aTrackButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
@@ -116,7 +139,7 @@ public class MainWindow extends JFrame
             });
             toolBar.add(aTrackButton);
             
-            JButton rTrackButton = new JButton("Remove Track");
+             rTrackButton = new JButton("Remove Track");
             rTrackButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
@@ -125,7 +148,7 @@ public class MainWindow extends JFrame
             });
             toolBar.add(rTrackButton);
             
-            JButton okButton = new JButton("OK");
+             okButton = new JButton("OK");
             okButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
@@ -134,7 +157,7 @@ public class MainWindow extends JFrame
             });
             toolBar.add(okButton);
             
-            JButton backButton = new JButton("Back");
+             backButton = new JButton("Back");
             backButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
