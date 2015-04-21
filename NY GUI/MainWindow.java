@@ -12,7 +12,7 @@ import javax.swing.border.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MainWindow extends JFrame
+public class MainWindow 
 {
      private static final String VERSION = "Version 1.0";
     private JTextField textField;
