@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.params=title\ min\ sec\ summary
 comment0.target=News(java.lang.String,\ long,\ long,\ java.lang.String)
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ News\r\n
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ News\n
 numComments=1

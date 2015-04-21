@@ -14,9 +14,6 @@ dependency12.type=UsesDependency
 dependency13.from=AudioTracks
 dependency13.to=AudioTrack
 dependency13.type=UsesDependency
-dependency14.from=Media
-dependency14.to=AudioTracks
-dependency14.type=UsesDependency
 dependency2.from=Register
 dependency2.to=CD
 dependency2.type=UsesDependency
@@ -45,15 +42,9 @@ objectbench.height=100
 objectbench.width=631
 package.editor.height=703
 package.editor.width=828
-<<<<<<< HEAD
-package.editor.x=128
-package.editor.y=121
-package.numDependencies=14
-=======
-package.editor.x=828
-package.editor.y=23
+package.editor.x=1175
+package.editor.y=43
 package.numDependencies=13
->>>>>>> 78ba989e39ba380a4156d6fbc808366873a98771
 package.numTargets=14
 package.showExtends=true
 package.showUses=true

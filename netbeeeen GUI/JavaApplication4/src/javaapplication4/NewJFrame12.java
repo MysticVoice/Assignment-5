@@ -5,6 +5,7 @@
  */
 package javaapplication4;
 
+import java.awt.Toolkit;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -24,8 +25,7 @@ public class NewJFrame12 extends javax.swing.JFrame{
     public NewJFrame12() {
         super("Gloppen NærRadio");
         initComponents();
-        final int SHORTCUT_MASK =
-            Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
+    
     }
 
     /**
@@ -109,7 +109,7 @@ public class NewJFrame12 extends javax.swing.JFrame{
         jButton7.setText("Remove Tape");
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5","item 6" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -133,9 +133,12 @@ public class NewJFrame12 extends javax.swing.JFrame{
 
         jButton10.setText("HDD");
 
-        jLabel4.setText("Globben NærRadio");
+        jLabel4.setText("Gloppen NærRadio");
 
         jButton11.setText("Search");
+
+        final int SHORTCUT_MASK =
+        Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
 
         jMenu1.setText("File");
 
@@ -159,7 +162,7 @@ public class NewJFrame12 extends javax.swing.JFrame{
         jMenuItem3.setText("About");
         jMenuItem3.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,SHORTCUT_MASK));
         jMenuItem3.addActionListener(new java.awt.event.ActionListener(){
-            public void actionPerormed(java.awt.event.ActionEvent evt){showAbout();}
+            public void actionPerformed(java.awt.event.ActionEvent evt){showAbout();}
         });
         jMenu2.add(jMenuItem3);
 
@@ -219,7 +222,7 @@ public class NewJFrame12 extends javax.swing.JFrame{
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(304, 304, 304))
         );
         layout.setVerticalGroup(
@@ -353,8 +356,8 @@ public class NewJFrame12 extends javax.swing.JFrame{
  private void showAbout()
     {
         JOptionPane.showMessageDialog(frame, 
-                    "Globben NærRadio\n" + VERSION,
-                    "About Globben NærRadio", 
+                    "Gloppen NærRadio\n" + VERSION,
+                    "About Gloppen NærRadio", 
                     JOptionPane.INFORMATION_MESSAGE);
     }
  private void quit()

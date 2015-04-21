@@ -81,11 +81,19 @@ dependency9.from=HDD
 dependency9.to=FileOnHDD
 dependency9.type=UsesDependency
 objectbench.height=100
+<<<<<<< HEAD
 objectbench.width=1207
 package.editor.height=780
 package.editor.width=1414
 package.editor.x=688
 package.editor.y=139
+=======
+objectbench.width=1051
+package.editor.height=571
+package.editor.width=1248
+package.editor.x=1366
+package.editor.y=103
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 package.numDependencies=27
 package.numTargets=16
 package.showExtends=true
@@ -102,8 +110,13 @@ target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=90
+<<<<<<< HEAD
 target1.x=480
 target1.y=560
+=======
+target1.x=270
+target1.y=540
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target10.editor.height=700
 target10.editor.width=900
 target10.editor.x=605
@@ -115,7 +128,11 @@ target10.showInterface=false
 target10.type=ClassTarget
 target10.typeParameters=
 target10.width=90
+<<<<<<< HEAD
 target10.x=0
+=======
+target10.x=10
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target10.y=390
 target11.editor.height=695
 target11.editor.width=900
@@ -128,7 +145,11 @@ target11.showInterface=false
 target11.type=ClassTarget
 target11.typeParameters=
 target11.width=80
+<<<<<<< HEAD
 target11.x=660
+=======
+target11.x=400
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target11.y=170
 target12.editor.height=700
 target12.editor.width=1052
@@ -141,7 +162,11 @@ target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
 target12.width=80
+<<<<<<< HEAD
 target12.x=860
+=======
+target12.x=540
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target12.y=120
 target13.editor.height=700
 target13.editor.width=900
@@ -154,8 +179,13 @@ target13.showInterface=false
 target13.type=ClassTarget
 target13.typeParameters=
 target13.width=80
+<<<<<<< HEAD
 target13.x=480
 target13.y=60
+=======
+target13.x=180
+target13.y=140
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target14.editor.height=700
 target14.editor.width=900
 target14.editor.x=871
@@ -167,8 +197,13 @@ target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
 target14.width=80
+<<<<<<< HEAD
 target14.x=330
 target14.y=590
+=======
+target14.x=200
+target14.y=600
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target15.editor.height=700
 target15.editor.width=900
 target15.editor.x=1020
@@ -180,8 +215,13 @@ target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
 target15.width=120
+<<<<<<< HEAD
 target15.x=340
 target15.y=210
+=======
+target15.x=150
+target15.y=240
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target16.editor.height=700
 target16.editor.width=900
 target16.editor.x=20
@@ -219,6 +259,7 @@ target3.showInterface=false
 target3.type=ClassTarget
 target3.typeParameters=
 target3.width=80
+<<<<<<< HEAD
 target3.x=110
 target3.y=530
 target4.editor.height=700
@@ -228,6 +269,12 @@ target4.editor.y=159
 target4.height=50
 target4.name=Archive
 target4.naviview.expanded=true
+=======
+target3.x=160
+target3.y=510
+target4.height=50
+target4.name=Archive
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
@@ -246,7 +293,11 @@ target5.type=ClassTarget
 target5.typeParameters=
 target5.width=80
 target5.x=280
+<<<<<<< HEAD
 target5.y=380
+=======
+target5.y=420
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target6.editor.height=700
 target6.editor.width=900
 target6.editor.x=154
@@ -258,8 +309,13 @@ target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
 target6.width=80
+<<<<<<< HEAD
 target6.x=530
 target6.y=210
+=======
+target6.x=250
+target6.y=320
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target7.editor.height=700
 target7.editor.width=900
 target7.editor.x=555
@@ -271,8 +327,13 @@ target7.showInterface=false
 target7.type=ClassTarget
 target7.typeParameters=
 target7.width=80
+<<<<<<< HEAD
 target7.x=200
 target7.y=220
+=======
+target7.x=60
+target7.y=180
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target8.editor.height=700
 target8.editor.width=900
 target8.editor.x=32
@@ -284,8 +345,13 @@ target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
 target8.width=120
+<<<<<<< HEAD
 target8.x=180
 target8.y=620
+=======
+target8.x=20
+target8.y=580
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
 target9.editor.height=700
 target9.editor.width=900
 target9.editor.x=11
@@ -297,5 +363,10 @@ target9.showInterface=false
 target9.type=ClassTarget
 target9.typeParameters=
 target9.width=90
+<<<<<<< HEAD
 target9.x=40
 target9.y=660
+=======
+target9.x=0
+target9.y=510
+>>>>>>> c9de154d78b81715cea3d6d612236fc80c37684e
