@@ -12,7 +12,7 @@ import javax.swing.border.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MainWindow 
+public class MainWindow extends JFrame
 {
      private static final String VERSION = "Version 1.0";
     private JTextField textField;
@@ -351,10 +351,8 @@ public class MainWindow
         {
             textPane.setLayout(new GridLayout(3,2));
             
-            textPane.add(new JLabel(""));
-            textPane.add(new JLabel(""));
-            textPane.add(new JLabel("CD name"));
-            textPane.add(new JLabel(""));
+            textPane.add(new JLabel("Title:"));
+            
             textField = new JTextField("");
             textPane.add(textField);
 
@@ -374,8 +372,8 @@ public class MainWindow
      private void showAbout()
     {
         JOptionPane.showMessageDialog(frame, 
-                    "Globben NærRadio\n" + VERSION,
-                    "About Globben NærRadio", 
+                    "Gloppen NærRadio\n" + VERSION,
+                    "About Gloppen NærRadio", 
                     JOptionPane.INFORMATION_MESSAGE);
     }
  
