@@ -29,17 +29,24 @@ public class MainWindow
     
     private JFrame frame;
     private JScrollPane listScroller;
+<<<<<<< Updated upstream
     private JPanel textPane, mediumPane, toolBar;
     
+=======
+    private JPanel textPane1, textPane2,  mediumPane, listPane;
+    private JButton aCDButton;
+>>>>>>> Stashed changes
   
     public static void main(String[] args)
     {
         MainWindow myApp = new MainWindow();
+        
     }
 
     public MainWindow()
     {
         super("Gloppen NærRadio");
+<<<<<<< Updated upstream
        
         
         makeFrame();
@@ -59,6 +66,11 @@ public class MainWindow
         
         
         textPane = new JPanel();
+=======
+        //listScroller = new JPanel();
+        textPane1 = new JPanel();
+        textPane2 = new JPanel();
+>>>>>>> Stashed changes
         mediumPane = new JPanel();
        
         makeMenuBar();
@@ -79,9 +91,11 @@ public class MainWindow
              
             aCDButton = new JButton("Add CD");
             aCDButton.addActionListener(new ActionListener() {
-                public void actionPerformed( ActionEvent event){   
-                    JButton button =(JButton) event.getSource();
+                public void actionPerformed( ActionEvent event) 
+                {   
+                   JButton button =(JButton) event.getSource();
                     if (button == aCDButton)
+<<<<<<< Updated upstream
                     {
                         contentPane.remove(textPane);
                                                             
@@ -98,8 +112,24 @@ public class MainWindow
                         
                     
                 }});
+=======
+                   {
+                        //contentPane.remove(listPane);
+                        contentPane.remove(mediumPane);
+                        contentPane.remove(textPane1);
+                        run();
+                      
+                       
+                        
+                   }
+                        
+                    
+                }
+>>>>>>> Stashed changes
 
-            
+
+            }); 
+             
             toolBar.add(aCDButton);
             
              rCDButton = new JButton("Remove CD");
@@ -107,8 +137,9 @@ public class MainWindow
                 public void actionPerformed( ActionEvent event) 
                 {
                    
+                
                 }
-            });
+             });
             toolBar.add(rCDButton);
             
              aTapeButton = new JButton("Add Tape");
@@ -162,7 +193,6 @@ public class MainWindow
                 public void actionPerformed( ActionEvent event) 
                 {
                   
-                   
                 }
             });
             toolBar.add(backButton);
@@ -259,30 +289,25 @@ public class MainWindow
     private void makeTextField()
     {
        JPanel contentPane = (JPanel) this.getContentPane();
-        textPane = new JPanel();
+        textPane1 = new JPanel();
         {
-            textPane.setLayout(new GridLayout(6,2));
+            textPane1.setLayout(new GridLayout(6,1));
             
             
-            textPane.add(new JLabel("Title:")); 
-            //textPane.add(new JLabel(""));
+            textPane1.add(new JLabel("Title:")); 
+            textPane1.add(new JTextField(""));
+            textPane1.add(new JLabel("Artist:"));
+            textPane1.add(new JTextField(""));
+            textPane1.add(new JLabel("Duration:"));
+            textPane1.add(new JTextField(""));
+
+        
             
-            textField = new JTextField("");
-            textPane.add(textField);
-            
-            textPane.add(new JLabel("Artist:"));
-            //textPane.add(new JLabel(""));
-            textPane.add(new JTextField(""));
-            
-            //textPane.add(new JLabel(""));
-            textPane.add(new JLabel("Duration:"));
-            //textPane.add(new JLabel(""));
-            textPane.add(new JTextField(""));
                  
 
 
         }  
-        contentPane.add( textPane, BorderLayout.CENTER);
+        contentPane.add( textPane1, BorderLayout.CENTER);
                            
     }
     
@@ -345,23 +370,31 @@ public class MainWindow
     
     private void addNewCD()
     {
-       JPanel contentPane = (JPanel) this.getContentPane();
+      /* JPanel contentPane = (JPanel) this.getContentPane();
         
-       JPanel textPane = new JPanel();
+       JPanel textPane2 = new JPanel();
         {
-            textPane.setLayout(new GridLayout(3,2));
-            
-            textPane.add(new JLabel(""));
-            textPane.add(new JLabel(""));
-            textPane.add(new JLabel("CD name"));
-            textPane.add(new JLabel(""));
-            textField = new JTextField("");
-            textPane.add(textField);
+            textPane2.setLayout(new GridLayout(2,1));
+            textPane2.add(new JLabel("CD name"));
+            textPane2.add(new JTextField(""));
+           
 
             
         }  
-        contentPane.add( textPane, BorderLayout.CENTER);
-        
+        contentPane.add( textPane2, BorderLayout.CENTER);
+    */
+    }
+    
+      private void run()
+      {
+        JPanel frame = new JPanel();
+                            
+        javax.swing.JLabel jLabel1;
+        javax.swing.JTextField jTextField1;
+        this.pack();
+        this.setVisible(true);
+
+    // End of variables declaration    
     }
     
     /**

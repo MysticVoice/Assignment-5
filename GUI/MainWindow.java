@@ -60,7 +60,7 @@ public class MainWindow extends JFrame
             JButton aCDButton = new JButton("Add CD");
             aCDButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
-<<<<<<< HEAD
+
                 {   
                     JButton button =(JButton) event.getSource();
                     if (button == aCDButton)
@@ -73,15 +73,7 @@ public class MainWindow extends JFrame
                         makeFrame();
                     }
                         
-                        
-                    //makeFrame();
-                    //addNewCD();
-=======
-                {
-                   
-                    addNewCD();
->>>>>>> f2b373aa17b5280b5629e49066a647856077b19c
-                   
+           
                 }
             });
             toolBar.add(aCDButton);
@@ -343,7 +335,8 @@ public class MainWindow extends JFrame
             
         }  
         contentPane.add( textPane, BorderLayout.CENTER);
-        
+        this.pack();
+        this.setVisible(true);
     }
     
     /**

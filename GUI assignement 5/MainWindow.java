@@ -55,7 +55,7 @@ public class MainWindow extends JFrame
             rCDButton.addActionListener(new ActionListener() {
                 public void actionPerformed( ActionEvent event) 
                 {
-                   
+                
                 }
             });
             toolBar.add(rCDButton);
@@ -151,5 +151,4 @@ public class MainWindow extends JFrame
     }
     
     
-
 }

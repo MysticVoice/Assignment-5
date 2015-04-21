@@ -2,15 +2,9 @@
 objectbench.height=100
 objectbench.width=668
 package.editor.height=400
-<<<<<<< HEAD
-package.editor.width=875
-package.editor.x=614
-package.editor.y=40
-=======
 package.editor.width=865
-package.editor.x=947
-package.editor.y=66
->>>>>>> origin/master
+package.editor.x=1251
+package.editor.y=70
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -18,8 +12,8 @@ package.showUses=true
 project.charset=UTF-8
 target1.editor.height=1001
 target1.editor.width=900
-target1.editor.x=736
-target1.editor.y=23
+target1.editor.x=361
+target1.editor.y=42
 target1.height=50
 target1.name=MainWindow
 target1.naviview.expanded=true
