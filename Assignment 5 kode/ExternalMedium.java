@@ -17,4 +17,13 @@ public class ExternalMedium extends Medium
         
     }
     
+    public void setArchiveNr(int archiveNr)
+    {
+        this.archiveNr=archiveNr;
+    }
+    
+    public int getArchiveNr()
+    {
+        return archiveNr;
+    }
 }

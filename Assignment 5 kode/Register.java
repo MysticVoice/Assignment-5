@@ -8,12 +8,14 @@ import java.util.ArrayList;
 public class Register
 {
     private ArrayList<Mediums> mediumsList;
+    private ArrayList<ArchiveList> archiveLists;
 
     /**
      * makes a register to initialize objects
      */
     public Register()
     {
+        archiveLists = new ArrayList<ArchiveList>();
         mediumsList = new ArrayList<Mediums>();
         fillRegister();
     }
@@ -24,6 +26,9 @@ public class Register
     private void fillRegister()
     {
         createMediumLists();
+        
+        createArchiveList("Archive CDs", 10000);
+        createArchiveList("Archive Tapes", 20000);
         
         Mediums harddisks = mediumsList.get(1);
         Mediums cds = mediumsList.get(0);
@@ -124,6 +129,12 @@ public class Register
         mediumsList.add(harddisks);
         mediumsList.add(tapes);
     }
+    
+    public Mediums createMediums()
+    {
+        Mediums mediums = new Mediums();
+        return mediums;
+    }
 
     /**
      * makes a new tape
@@ -150,11 +161,55 @@ public class Register
     /**
      * makes a new CD
      */
-    private CD createCD(String album, String artist,int year, String label)
+    public CD createCD(String album, String artist,int year, String label)
     {
+        ArchiveList cdArchive = archiveLists.get(0);
         Mediums cds = mediumsList.get(0);
         CD cd = new CD(album,artist,year,label);
         cds.addMedium(cd);
+        cdArchive.addMedium(cd);
+        
         return cd;
+    }
+    
+    public void createArchiveList(String name, int archiveNr)
+    {
+        Mediums mediums = createMediums();
+        ArchiveList archive = new ArchiveList(name, archiveNr, mediums);
+        archiveLists.add(archive);
+    }
+    
+    public void removeMedium(Medium medium)
+    {
+        Mediums cds, tapes, harddisks;
+        ArchiveList archiveCds, archiveTapes;
+        
+        cds = mediumsList.get(0);
+        harddisks = mediumsList.get(1);
+        tapes = mediumsList.get(2);
+        
+        archiveCds = archiveLists.get(0);
+        archiveTapes = archiveLists.get(1);
+        
+        boolean stuff;
+        
+        if(medium instanceof ExternalMedium)
+        {
+            if(medium instanceof CD)
+            {
+                cds.removeMedium(medium);
+                archiveCds.setNull(medium);
+                stuff = true;
+            }
+            else if (medium instanceof Tape)
+            {
+                tapes.removeMedium(medium);
+                archiveTapes.setNull(medium);
+            }
+        }
+        else if (medium instanceof HDD)
+        {
+            harddisks.removeMedium(medium);
+        }
     }
 }
