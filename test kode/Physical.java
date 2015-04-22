@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Physical extends Media
+abstract class Physical extends Media
 {
     // instance variables - replace the example below with your own
 

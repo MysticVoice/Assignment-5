@@ -9,6 +9,7 @@ public class Register
 {
     // instance variables - replace the example below with your own
     private AllMedia star;
+
     /**
      * Constructor for objects of class Register
      */
@@ -16,21 +17,60 @@ public class Register
     {
         // initialise instance variables
         star = new AllMedia();
-        AllMedia star = new AllMedia();
 
     }
 
-    public Media makecd()
+    public AudioTrack SoundEffect(String description, String title, long minutes, long seconds)
     {
-        CD cd = new CD("title", "artist", "label", 1, 1, 11);
-        return cd;
+        AudioTrack soundEffect = new SoundEffect(description, title, minutes, seconds);
+        return soundEffect;
     }
 
-    public void fillAllMedia()
+    public AudioTrack createMusic(String artist, String dateLastPlayed, int timesPlayed, String title, long minutes, long seconds)
     {
-        star.addMedia(this.makecd());
-        star.addMedia(new Tape("titel", "digital"));
-        
+        AudioTrack music = new Music(artist, timesPlayed, title, minutes, seconds);
+        return music;
+    }
+
+    public AudioTrack createAdvertisingJingle(String product, String company, String title, long minutes, long seconds)
+    {
+        AudioTrack advertisingJingle = new AdvertisingJingle(product, company, title, minutes, seconds); 
+        return advertisingJingle;
+    }
+
+    public AudioTrack createNews(String newsStory, String dateMade, String dateBroadcasted, String journalist, String title, long minutes, long seconds)
+    {
+        AudioTrack news = new News(newsStory, journalist, title, minutes, seconds); 
+        return news;
+    }
+
+    public void fillregister()
+    {
+        // AllMedia allMedia1 = new AllMedia();
+        CD cD1 = new CD("", "", "", 1992);
+        Tape tape1 = new Tape("", "");
+        Music music1 = new Music("", 1, "", 1, 1);
+        AdvertisingJingle advertis1 = new AdvertisingJingle("", "", "", 1, 1);
+        News news1 = new News("", "", "", 1, 1);
+        SoundEffect soundEff1 = new SoundEffect("", "", 1, 1);
+        star.addMedia(cD1);
+        star.addMedia(tape1);
+        cD1.addTrack(music1);
+        cD1.addTrack(advertis1);
+        tape1.addTrack(soundEff1);
+        tape1.addTrack(news1);
+        cD1.setLabel("8");
+    }
+
+    public void dur()
+    {
+        CD cD1 = new CD("title", "artist", "label", 1994);
+        SoundEffect soundEff1 = new SoundEffect("desc", "ti", 0, 1);
+        SoundEffect soundEff2 = new SoundEffect("desc", "title", 0, 1);
+        cD1.addTrack(soundEff1);
+        cD1.addTrack(soundEff2);
+        soundEff1.setDuration(0, 2);
+        star.addMedia(cD1);
     }
 
 }

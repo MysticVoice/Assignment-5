@@ -14,12 +14,48 @@ public class AdvertisingJingle extends AudioTrack
     /**
      * Constructor for objects of class AdvertisingJingle
      */
-    public AdvertisingJingle(String product, String company, String title, double minutes, double seconds)
+    public AdvertisingJingle(String product, String company, String title, long minutes, long seconds)
     {
         super(title, minutes, seconds);
         this.product = product;
         this.company = company;
     }
-
     
+    
+    // accessors
+    
+    /**
+     * returns the product
+     * @return the product string
+     */
+    public String product()
+    {
+        return product;
+    }
+    
+    /**
+     * returns the company
+     * @return the company string
+     */
+    public String company()
+    {
+        return company;
+    }
+    
+    //mutators
+    
+    /**
+     * change times played
+     */
+    public void setProduct(String product)
+    {
+        this.product = product;
+    }
+    /**
+     * change artist
+     */
+    public void setCompany(String company)
+    {
+        this.company = company;
+    }
 }

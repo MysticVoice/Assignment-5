@@ -17,4 +17,20 @@ public class Tape extends Physical
        super(title);
        this.type = type;
     }
+    
+    
+      /**
+     * returns the type
+     * @return the type
+     */
+    public String getType()
+    {
+        return type;
+    }
+    
+    public void setType(String type)
+    {
+        this.type = type;
+    }
 }
+
