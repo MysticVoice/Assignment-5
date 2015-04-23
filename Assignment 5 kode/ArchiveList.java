@@ -1,20 +1,19 @@
 
 /**
- * Write a description of class ArchiveList here.
+ * Keeps track of the archive numbers of objects of ExternalMedium
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class ArchiveList
 {
-    // instance variables - replace the example below with your own
     private int archiveSpecific;
     private String name;
     private Mediums mediums;
     private int mediumsIndex;
 
     /**
-     * Constructor for objects of class ArchiveList
+     * Creates an archive which will distribute a selection of archive numbers
      */
     public ArchiveList(String name, int archiveNumber, Mediums mediums)
     {
@@ -23,16 +22,16 @@ public class ArchiveList
         this.mediums = mediums;
     }
     
+    /**
+     * Adds a medium to the first available index;
+     */
     public void addMedium(Medium medium)
     {
-        //Don't know why this sets the first objects archive number to 10001 
-        //but it works to our advantage so who cares
-        int index;
+        int index = mediumsIndex;
         if(detectNull())
         {
             Medium mediumReplaced;
-            mediumReplaced = mediums.getMedium(mediumsIndex);
-            mediumReplaced = medium;
+            mediums.setMedium(index, medium);
             ((ExternalMedium)medium).setArchiveNr(mediumsIndex+archiveSpecific);
         }
         else
@@ -44,7 +43,9 @@ public class ArchiveList
     }
     
     
-    
+    /**
+     * detects the first available index in mediums
+     */
     private boolean detectNull()
     {
         boolean result;
@@ -52,7 +53,11 @@ public class ArchiveList
         for (int i = 1; i< mediums.getSize(); i++)
         {
             Medium medium = mediums.getMedium(i);
-            if(medium == null)
+            if(medium instanceof ExternalMedium)
+            {}
+            else if(medium instanceof HDD)
+            {}
+            else
             {
                 result = true;
                 mediumsIndex = i;
@@ -61,6 +66,9 @@ public class ArchiveList
         return result;
     }
     
+    /**
+     * Gives a medium to mediums for nullification
+     */
     public void setNull(Medium medium)
     {
         mediums.nullifyMedium(medium);

@@ -1,8 +1,11 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Track()
+comment0.text=\r\n\ Constructor\ for\ Track\r\n
 comment1.params=
 comment1.target=java.time.Duration\ getDuration()
+comment1.text=\r\n\ placeholder\ function\r\n
 comment2.params=
 comment2.target=java.lang.String\ getTitle()
+comment2.text=\r\n\ placeholder\ function\r\n
 numComments=3

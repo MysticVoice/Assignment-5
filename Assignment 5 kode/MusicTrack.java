@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class MusicTrack here.
+ * Class for music tracks
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -18,11 +18,17 @@ public class MusicTrack extends SubTrack
         this.artist = artist;
     }
     
+    /**
+     * returns artist
+     */
     public String getArtist()
     {
         return artist;
     }
     
+    /**
+     * returns timesPlayed
+     */
     public int getTimesPlayed()
     {
         return timesPlayed;

@@ -19,11 +19,25 @@ public class Tracks
         tracks = new ArrayList<Track>();
     }
     
+    /**
+     * returns a track
+     */
+    public Track getTrack(int index)
+    {
+        return tracks.get(index);
+    }
+    
+    /**
+     * adds a track
+     */
     public void addTrack(Track track)
     {
         tracks.add(track);
     }
     
+    /**
+     * returns total duration
+     */
     public Duration getTime()
     {
         Duration test = Duration.ofSeconds(0);

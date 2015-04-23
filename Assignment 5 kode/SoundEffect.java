@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class SoundEffect here.
+ * Class for sound effects
  * 
  * @author (your name) 
  * @version (a version number or a date)

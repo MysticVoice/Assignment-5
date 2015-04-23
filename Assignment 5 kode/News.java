@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class News here.
+ * Class for news
  * 
  * @author (your name) 
  * @version (a version number or a date)

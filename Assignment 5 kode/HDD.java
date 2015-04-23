@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 /**
- * Write a description of class HDD here.
+ * Class for HDD objects
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -16,6 +16,9 @@ public class HDD extends Medium
         this.name = name;
     }
     
+    /**
+     * adds a file to tracks
+     */
     public void addTrack (FileOnHDD track)
     {
         tracks.addTrack(track);

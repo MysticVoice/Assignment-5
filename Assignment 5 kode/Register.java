@@ -9,7 +9,7 @@ public class Register
 {
     private ArrayList<Mediums> mediumsList;
     private ArrayList<ArchiveList> archiveLists;
-
+    
     /**
      * makes a register to initialize objects
      */
@@ -19,7 +19,7 @@ public class Register
         mediumsList = new ArrayList<Mediums>();
         fillRegister();
     }
-
+    
     /**
      * creates all medium objects and track objects
      */
@@ -111,6 +111,9 @@ public class Register
         return result;
     }
     
+    /**
+     * returns mediumsList
+     */
     public ArrayList<Mediums> getMediumsList()
     {
         return mediumsList;
@@ -130,6 +133,9 @@ public class Register
         mediumsList.add(tapes);
     }
     
+    /**
+     * creates a new Mediums
+     */
     public Mediums createMediums()
     {
         Mediums mediums = new Mediums();
@@ -137,7 +143,7 @@ public class Register
     }
 
     /**
-     * makes a new tape
+     * makes a new Tape
      */
     private Tape createTape(boolean digital)
     {
@@ -172,6 +178,9 @@ public class Register
         return cd;
     }
     
+    /**
+     * Creates a new ArchiveList
+     */
     public void createArchiveList(String name, int archiveNr)
     {
         Mediums mediums = createMediums();
@@ -179,6 +188,9 @@ public class Register
         archiveLists.add(archive);
     }
     
+    /**
+     * removes a medium from archivelist and mediums
+     */
     public void removeMedium(Medium medium)
     {
         Mediums cds, tapes, harddisks;

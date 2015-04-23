@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class CD here.
+ * Class for CD objects
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -23,11 +23,17 @@ public class CD extends ExternalMedium
         this.label = label;
     }
     
+    /**
+     * returns artist
+     */
     public String getArtist()
     {
         return artist;
     }
     
+    /**
+     * creates a descriptive string for printing
+     */
     public String printString()
     {
         String returnString = "Album: " + album + " \nArtist: " + artist + " \nYear released: " + yearReleased + " \nLabel: " + label;

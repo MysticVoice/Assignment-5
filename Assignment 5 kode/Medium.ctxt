@@ -1,7 +1,11 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Medium()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Medium\r\n
+comment0.text=\r\n\ Creates\ a\ new\ medium\r\n
 comment1.params=track
 comment1.target=void\ addTrack(Track)
-numComments=2
+comment1.text=\r\n\ adds\ a\ track\ to\ tracks\r\n
+comment2.params=index
+comment2.target=Track\ getTrack(int)
+comment2.text=\r\n\ Returns\ a\ track\r\n
+numComments=3

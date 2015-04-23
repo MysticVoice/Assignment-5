@@ -1,6 +1,6 @@
 import java.time.Duration;
 /**
- * Write a description of class Track here.
+ * Main class for Track objects
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -8,24 +8,25 @@ import java.time.Duration;
 public class Track
 {
 
+    /**
+     * Constructor for Track
+     */
     public Track()
     {}
+    
+    /**
+     * placeholder function
+     */
     public Duration getDuration()
     {
         return null;
     }
+    
+    /**
+     * placeholder function
+     */
     public String getTitle()
     {
         return null;
     }
-    
-    //     public double trackLength(String fileLocation)throws UnsupportedAudioFileException, IOException
-    //     {
-    //         File file = new File(fileLocation);
-    //         AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
-    //         AudioFormat format = audioInputStream.getFormat();
-    //         long frames = audioInputStream.getFrameLength();
-    //         double durationInSeconds = (frames+0.0) / format.getFrameRate(); 
-    //         return durationInSeconds;
-    //      }
 }

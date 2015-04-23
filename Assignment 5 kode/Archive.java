@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 /**
- * Write a description of class Archive here.
+ * All UI functionality will be collected here
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -9,6 +9,7 @@ public class Archive
 {
     private Register register;
     private Medium activeMedium;
+    private Track activeTrack;
 
     /**
      * Constructor for objects of class Archive
@@ -19,6 +20,19 @@ public class Archive
         activeMedium = getCDList().get(0);
         String something = ((CD)activeMedium).getArtist();
         System.out.println(something);
+    }
+    
+    /**
+     * Selects a track
+     */
+    public void selectTrack(int index)
+    {
+        if (activeMedium == null)
+        {}
+        else
+        {
+            this.activeTrack = activeMedium.getTrack(index);
+        }
     }
     
     /**
@@ -48,9 +62,14 @@ public class Archive
         return returnList;
     }
     
+    /**
+     * calls removeMedium on activeMedium
+     */
     public void removeActiveMedium()
     {
         removeMedium(activeMedium);
+        activeMedium = null;
+        activeTrack = null;
     }
     
     /**
@@ -75,7 +94,7 @@ public class Archive
     }
     
     /**
-     * Removes the active medium
+     * Removes a medium
      */
     public void removeMedium(Medium medium)
     {

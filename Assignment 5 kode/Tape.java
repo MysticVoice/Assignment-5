@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Tape here.
+ * Class for Tape objects
  * 
  * @author (your name) 
  * @version (a version number or a date)

@@ -23,6 +23,9 @@ public class FileOnHDD extends Track
         this.path = path;
     }
     
+    /**
+     * gets the duration
+     */
     public Duration getDuration()
     {
         return track.getDuration();

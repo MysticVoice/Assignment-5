@@ -1,6 +1,6 @@
 import java.time.Duration;
 /**
- * Write a description of class SubTrack here.
+ * Main class for standalone tracks
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -19,6 +19,9 @@ public class SubTrack extends Track
         this.title = title;
     }
     
+    /**
+     * sets duration
+     */
     protected Duration duration(long min, long sec)
     { 
         Duration dur = Duration.ofSeconds(sec).plusMinutes(min);
@@ -33,6 +36,9 @@ public class SubTrack extends Track
         return title;
     }
     
+    /**
+     * returns duration
+     */
     public Duration getDuration()
     {
         return duration;

@@ -4,4 +4,5 @@ comment0.target=HDD(java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ HDD\r\n
 comment1.params=track
 comment1.target=void\ addTrack(FileOnHDD)
+comment1.text=\r\n\ adds\ a\ file\ to\ tracks\r\n
 numComments=2

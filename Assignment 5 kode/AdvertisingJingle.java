@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class AdvertisingJingle here.
+ * Class for advertising jingles
  * 
  * @author (your name) 
  * @version (a version number or a date)
