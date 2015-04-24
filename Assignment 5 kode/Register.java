@@ -63,6 +63,10 @@ public class Register
         disk.addTrack(track);
     }
     
+    public Mediums getMediums(int index)
+    {
+        return mediumsList.get(index);
+    }
     
     /**
      * creates a music track

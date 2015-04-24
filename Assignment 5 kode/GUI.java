@@ -16,11 +16,13 @@ import javax.swing.border.*;
  * @author Vidar
  */
 public class GUI extends javax.swing.JFrame {
+    private Archive archive;
 
     /**
      * Creates new form GUI
      */
     public GUI() {
+        archive = new Archive();
         initComponents();
     }
 
@@ -53,8 +55,11 @@ public class GUI extends javax.swing.JFrame {
 
         jButton2.setText("CD");
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-                String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        jList1.setModel(new javax.swing.AbstractListModel() 
+        {
+                Mediums activeMediums = archive.selectMediums(0);
+                String[] strings = activeMediums.getMediumsString();
+                //= { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
                 public int getSize() { return strings.length; }
 
                 public Object getElementAt(int i) { return strings[i]; }

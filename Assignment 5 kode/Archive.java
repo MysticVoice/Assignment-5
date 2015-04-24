@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class Archive
 {
     private Register register;
-    private Medium activeMedium;
     private Track activeTrack;
 
     /**
@@ -18,21 +17,11 @@ public class Archive
     {
         register = new Register();
         //activeMedium = getCDList().get(0);
-        String something = ((CD)activeMedium).getArtist();
-        System.out.println(something);
     }
     
-    /**
-     * Selects a track
-     */
-    public void selectTrack(int index)
+    public Mediums selectMediums(int index)
     {
-        if (activeMedium == null)
-        {}
-        else
-        {
-            this.activeTrack = activeMedium.getTrack(index);
-        }
+        return register.getMediums(index);
     }
     
     /**
@@ -40,16 +29,6 @@ public class Archive
      */
     public String[] getStringListMediums(Mediums mediums){
         return mediums.getMediumsString();
-    }
-    
-    /**
-     * calls removeMedium on activeMedium
-     */
-    public void removeActiveMedium()
-    {
-        removeMedium(activeMedium);
-        activeMedium = null;
-        activeTrack = null;
     }
     
 //     /**
