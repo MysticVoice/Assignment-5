@@ -73,4 +73,14 @@ public class ArchiveList
     {
         mediums.nullifyMedium(medium);
     }
+    
+    public int getSpecific()
+    {
+        return archiveSpecific;
+    }
+    
+    public Mediums getMediums()
+    {
+        return mediums;
+    }
 }

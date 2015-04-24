@@ -107,6 +107,11 @@ dependency40.type=UsesDependency
 dependency41.from=GUI
 dependency41.to=Archive
 dependency41.type=UsesDependency
+<<<<<<< HEAD
+dependency42.from=Archive
+dependency42.to=ArchiveList
+dependency42.type=UsesDependency
+=======
 dependency42.from=GUI
 dependency42.to=Mediums
 dependency42.type=UsesDependency
@@ -119,6 +124,7 @@ dependency44.type=UsesDependency
 dependency45.from=TrackType
 dependency45.to=AddJingle
 dependency45.type=UsesDependency
+>>>>>>> origin/master
 dependency5.from=Register
 dependency5.to=Medium
 dependency5.type=UsesDependency
@@ -135,12 +141,21 @@ dependency9.from=HDD
 dependency9.to=FileOnHDD
 dependency9.type=UsesDependency
 objectbench.height=100
+<<<<<<< HEAD
+objectbench.width=1360
+package.editor.height=545
+package.editor.width=1567
+package.editor.x=72
+package.editor.y=24
+package.numDependencies=42
+=======
 objectbench.width=939
 package.editor.height=1203
 package.editor.width=1146
 package.editor.x=1066
 package.editor.y=0
 package.numDependencies=45
+>>>>>>> origin/master
 package.numTargets=29
 package.showExtends=true
 package.showUses=true
@@ -171,8 +186,8 @@ target10.x=650
 target10.y=340
 target11.editor.height=700
 target11.editor.width=900
-target11.editor.x=86
-target11.editor.y=81
+target11.editor.x=998
+target11.editor.y=105
 target11.height=50
 target11.name=ArchiveList
 target11.naviview.expanded=true
@@ -417,8 +432,13 @@ target29.x=170
 target29.y=460
 target3.editor.height=700
 target3.editor.width=899
+<<<<<<< HEAD
+target3.editor.x=113
+target3.editor.y=344
+=======
 target3.editor.x=244
 target3.editor.y=35
+>>>>>>> origin/master
 target3.height=50
 target3.name=Archive
 target3.naviview.expanded=true
