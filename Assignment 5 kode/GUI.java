@@ -135,25 +135,24 @@ public class GUI extends javax.swing.JFrame {
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) 
                 {
-                    JButton button = new javax.swing.JButton(); 
-                    if (jTextField1.getText().length() > 0)
-                    {
-                        if(button == jButton7)
-                        {
-                            SearchList search = new SearchList();
-                            search.setVisible(true);
-                        }
-
-                    }
+                    
 
                 }});
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CD", "Item 2", "Item 3", "Item 4" }));
 
-        jButton7.setText("Search");
-        
+        jButton7.setText("Search");        
         jButton7.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    if (jTextField1.getText().length() > 0)
+                    {
+                        
+                        
+                            SearchList search = new SearchList();
+                            search.setVisible(true);
+                        
+
+                    }
                     
                 }
             });

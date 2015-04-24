@@ -56,6 +56,13 @@ public class TrackList extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         jButton3.setText("Add");
+         jButton3.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    TrackType type = new TrackType();
+                    type.setVisible(true);
+                }
+            });
+        
 
         jButton4.setText("Remove");
 

@@ -45,7 +45,7 @@ public class TrackType extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jButton3.setText("Adertising Jingle");
+        jButton3.setText("Jingle");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     AddJingle jingle = new AddJingle();
@@ -54,10 +54,28 @@ public class TrackType extends javax.swing.JFrame {
             });
 
         jButton5.setText("Sound Effect");
+         jButton5.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    AddSounds sound = new AddSounds();
+                    sound.setVisible(true);
+                }
+            });
 
         jButton4.setText("Music");
+         jButton4.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    AddMusic song = new AddMusic();
+                    song.setVisible(true);
+                }
+            });
 
         jButton6.setText("News");
+         jButton6.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    AddNews news = new AddNews();
+                    news.setVisible(true);
+                }
+            });
 
         jLabel1.setFont(new java.awt.Font("Centaur", 0, 14)); // NOI18N
         jLabel1.setText("Choose type ");
