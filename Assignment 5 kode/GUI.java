@@ -39,6 +39,8 @@ public class GUI extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
+        jList2 = new javax.swing.JList();
+        jList3 = new javax.swing.JList();
         jButton4 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox();
@@ -54,6 +56,12 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton2.setText("CD");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jScrollPane1.setViewportView(jList1);
+                }
+            });
+
 
         jList1.setModel(new javax.swing.AbstractListModel() 
         {
@@ -64,7 +72,56 @@ public class GUI extends javax.swing.JFrame {
 
                 public Object getElementAt(int i) { return strings[i]; }
             });
-        jScrollPane1.setViewportView(jList1);
+            jList1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jList1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+            
+          jList2.setModel(new javax.swing.AbstractListModel() 
+        {
+                Mediums activeMediums = archive.selectMediums(1);
+                String[] strings = activeMediums.getMediumsString();
+                //= { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+                public int getSize() { return strings.length; }
+
+                public Object getElementAt(int i) { return strings[i]; }
+            }); 
+              jList2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jList2AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+            
+              jList3.setModel(new javax.swing.AbstractListModel() 
+        {
+                Mediums activeMediums = archive.selectMediums(2);
+                String[] strings = activeMediums.getMediumsString();
+                //= { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+                public int getSize() { return strings.length; }
+
+                public Object getElementAt(int i) { return strings[i]; }
+            });
+              jList3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jList3AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+            
+            
+        //jScrollPane1.setViewportView(jList1);
 
         jButton4.setText("Add");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -106,8 +163,20 @@ public class GUI extends javax.swing.JFrame {
         jButton6.setText("Remove");
 
         jButton3.setText("Tape");
+         jButton3.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jScrollPane1.setViewportView(jList3);
+                }
+            });
+
 
         jButton8.setText("HDD");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jScrollPane1.setViewportView(jList2);
+                }
+            });
+
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -226,10 +295,21 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JList jList1;
+    private javax.swing.JList jList2;
+    private javax.swing.JList jList3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    // End of variables declaration                   
+    // End of variables declaration 
+     private void jList1AncestorAdded(javax.swing.event.AncestorEvent evt) {                                     
+        // TODO add your handling code here:
+    }
+    private void jList2AncestorAdded(javax.swing.event.AncestorEvent evt) {                                     
+        // TODO add your handling code here:
+    }
+    private void jList3AncestorAdded(javax.swing.event.AncestorEvent evt) {                                     
+        // TODO add your handling code here:
+    } 
 }
