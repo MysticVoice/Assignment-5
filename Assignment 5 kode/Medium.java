@@ -31,4 +31,13 @@ public class Medium
     {
         return tracks.getTrack(index);
     }
+    
+    /**
+     * Gets gui text
+     */
+    public String getText()
+    {
+        String resultString = "";
+        return resultString;
+    }
 }

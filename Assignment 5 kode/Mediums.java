@@ -44,9 +44,17 @@ public class Mediums
     /**
      * returns mediums
      */
-    public ArrayList<Medium> getMediums()
+    public String[] getMediumsString()
     {
-        return mediums;
+        String[] returnArray;
+        int size;
+        size = getSize();
+        returnArray = new String[size];
+        for(int i = 0; i<size; i++)
+        {
+            returnArray[i] = mediums.get(i).getText();
+        }
+        return returnArray;
     }
     
     /**

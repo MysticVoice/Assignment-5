@@ -17,7 +17,7 @@ public class Archive
     public Archive()
     {
         register = new Register();
-        activeMedium = getCDList().get(0);
+        //activeMedium = getCDList().get(0);
         String something = ((CD)activeMedium).getArtist();
         System.out.println(something);
     }
@@ -38,28 +38,8 @@ public class Archive
     /**
      * Gets an arraylist of cds
      */
-    private ArrayList<Medium> getCDList(){
-        Mediums list = register.getMediumsList().get(0);
-        ArrayList<Medium> returnList = list.getMediums();
-        return returnList;
-    }
-    
-    /**
-     * Gets an arraylist of tapes
-     */
-    private ArrayList<Medium> getTapeList(){
-        Mediums list = register.getMediumsList().get(2);
-        ArrayList<Medium> returnList = list.getMediums();
-        return returnList;
-    }
-    
-    /**
-     * Gets an arraylist of harddisks
-     */
-    private ArrayList<Medium> getHarddiskList(){
-        Mediums list = register.getMediumsList().get(1);
-        ArrayList<Medium> returnList = list.getMediums();
-        return returnList;
+    public String[] getStringListMediums(Mediums mediums){
+        return mediums.getMediumsString();
     }
     
     /**
@@ -72,26 +52,26 @@ public class Archive
         activeTrack = null;
     }
     
-    /**
-     * Searches for cd with an artist string that contains the input string
-     */
-    public void searchCDsByArtist(String input)
-    {
-        ArrayList<Medium> unSearched = getCDList();
-        Mediums mediums = new Mediums();
-        for (int i = 0; i<unSearched.size(); i++)
-        {
-            Medium medium = unSearched.get(i);
-            String inputLowrCase = input.toLowerCase();
-            String cdArtist = ((CD)medium).getArtist().toLowerCase();
-            if(cdArtist.contains(inputLowrCase))
-            {
-                mediums.addMedium(medium);
-                System.out.print(((CD)medium).printString());
-                System.out.println();
-            }
-        }
-    }
+//     /**
+//      * Searches for cd with an artist string that contains the input string
+//      */
+//     public void searchCDsByArtist(String input)
+//     {
+//         ArrayList<Medium> unSearched = getCDList();
+//         Mediums mediums = new Mediums();
+//         for (int i = 0; i<unSearched.size(); i++)
+//         {
+//             Medium medium = unSearched.get(i);
+//             String inputLowrCase = input.toLowerCase();
+//             String cdArtist = ((CD)medium).getArtist().toLowerCase();
+//             if(cdArtist.contains(inputLowrCase))
+//             {
+//                 mediums.addMedium(medium);
+//                 System.out.print(((CD)medium).printString());
+//                 System.out.println();
+//             }
+//         }
+//     }
     
     /**
      * Removes a medium
