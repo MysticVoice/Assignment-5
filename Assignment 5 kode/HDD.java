@@ -23,4 +23,19 @@ public class HDD extends Medium
     {
         tracks.addTrack(track);
     }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    /**
+     * Returns gui text
+     */
+    public String getText()
+    {
+        String resultString = "";
+        resultString = getName();
+        return resultString;
+    }
 }
