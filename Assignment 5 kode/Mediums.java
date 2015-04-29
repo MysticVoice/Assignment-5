@@ -38,7 +38,10 @@ public class Mediums
      */
     public Medium getMedium(int index)
     {
-        return mediums.get(index);
+        Medium result = null;
+        if(index < mediums.size())
+            {result = mediums.get(index);}
+        return result;
     }
     
     /**
