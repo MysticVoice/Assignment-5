@@ -40,7 +40,7 @@ public class Medium
         returnArray = new String[size];
         for(int i = 0; i<size; i++)
         {
-            returnArray[i] = tracks.getTrack(i).getText();
+            returnArray[i] = tracks.getTrack(i).getTitle();
         }
         return returnArray;
     }

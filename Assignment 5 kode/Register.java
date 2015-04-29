@@ -94,9 +94,9 @@ public class Register
     /**
      * creates a news file
      */
-    private News createNews(String title, long min, long sec, String summary)
+    private News createNews(String title, String journalist, long min, long sec, String summary)
     {
-        News track = new News(title, min, sec, summary);
+        News track = new News(title, journalist, min, sec, summary);
         return track;
     }
     
