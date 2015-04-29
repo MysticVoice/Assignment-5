@@ -68,11 +68,22 @@ public class MusicTrack extends SubTrack
         this.artist = artist;
     }
 
-    public void getDateLastPlayed()
+    public String getDateLastPlayed()
     {
-        System.out.println("YEAR: " + dateLastPlayed.get(dateLastPlayed.YEAR));
-        System.out.println("MONTH: " + ((dateLastPlayed.get(dateLastPlayed.MONTH)+1)));
-        System.out.println("DATE: " + dateLastPlayed.get(dateLastPlayed.DATE));
+        String returnString = "YEAR: " + dateLastPlayed.get(dateLastPlayed.YEAR);
+        returnString += "MONTH: " + (dateLastPlayed.get(dateLastPlayed.MONTH)+1);
+        returnString += "DATE: " + dateLastPlayed.get(dateLastPlayed.DATE);
+        return returnString;
     }
 
+    public String getLongDescription()
+    {
+        String returnString = 
+        "Title: "+super.getTitle()
+        +" Artist: "+getArtist()
+        +" Duration: "+super.getDuration()
+        +" Last Played: "+getDateLastPlayed()
+        +" Times Played: "+getTimesPlayed();
+        return returnString;
+    }
 }

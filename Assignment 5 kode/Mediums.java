@@ -66,7 +66,26 @@ public class Mediums
         int size = getSize();
         for(int i = 0; i<size; i++)
         {
-            returnString += "\n"+ i + ". " + mediums.get(i).getText();
+            Medium medium = mediums.get(i);
+            returnString += "\n"+ i + ". " +medium.getText() + "  medium: " + getType(medium); 
+        }
+        return returnString;
+    }
+    
+    public String getType(Medium medium)
+    {
+        String returnString = "";
+        if(medium instanceof CD)
+        {
+            returnString = "CD";
+        }
+        else if(medium instanceof Tape)
+        {
+            returnString = "Tape";
+        }
+        else if(medium instanceof HDD)
+        {
+            returnString = "HDD";
         }
         return returnString;
     }

@@ -26,6 +26,16 @@ public class SoundEffect extends SubTrack
         return description;
     }
     
+    public String getLongDescription()
+    {
+        String returnString = 
+            "Title: "+super.getTitle()
+            +" description "+getDescription()
+            +" Duration: "+super.getDuration();
+
+        return returnString;
+    }    
+    
     public void setDescription(String description)
     {
         this.description = description;

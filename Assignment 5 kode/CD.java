@@ -49,4 +49,10 @@ public class CD extends ExternalMedium
         resultString = getArtist();
         return resultString;
     }
+    
+    public String getLongDescription()
+    {
+        String returnString = "Album: " + album + " Artist: " + artist + " Year released: " + yearReleased + " Label: " + label;
+        return returnString;
+    }
 }

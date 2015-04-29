@@ -29,6 +29,12 @@ public class HDD extends Medium
         return name;
     }
     
+    public String getLongDescription()
+    {
+        String returnString = " Name: "+getName();
+        return returnString;
+    }
+    
     /**
      * Returns gui text
      */

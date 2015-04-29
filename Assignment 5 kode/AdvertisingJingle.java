@@ -24,7 +24,7 @@ public class AdvertisingJingle extends SubTrack
      * returns the product
      * @return the product string
      */
-    public String product()
+    public String getProduct()
     {
         return product;
     }
@@ -33,7 +33,7 @@ public class AdvertisingJingle extends SubTrack
      * returns the company
      * @return the company string
      */
-    public String company()
+    public String getCompany()
     {
         return company;
     }
@@ -53,5 +53,15 @@ public class AdvertisingJingle extends SubTrack
     public void setCompany(String company)
     {
         this.company = company;
+    }
+    
+    public String getLongDescription()
+    {
+        String returnString = 
+        "Title: "+super.getTitle()
+        +" Duration: "+super.getDuration()
+        +" Company: "+getCompany()
+        +" Product: "+getProduct();
+        return returnString;
     }
 }

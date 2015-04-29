@@ -20,5 +20,6 @@ public abstract class Track
     abstract protected Duration getDuration();
     
     abstract protected String getTitle();
-
+    
+    abstract protected String getLongDescription();
 }

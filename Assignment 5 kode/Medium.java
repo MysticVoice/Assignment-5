@@ -50,6 +50,21 @@ public class Medium
         return returnArray;
     }
     
+    public String getTracksDescription()
+    {
+        String returnString;
+        int size;
+        size = tracks.getSize();
+        returnString = "";
+        for(int i = 0; i<size; i++)
+        {
+            returnString += tracks.getTrack(i).getLongDescription() + "\n";
+        }
+        return returnString;
+    }
+    
+    public String getLongDescription(){return "";}
+    
     /**
      * Gets gui text
      */

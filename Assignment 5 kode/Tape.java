@@ -29,4 +29,22 @@ public class Tape extends ExternalMedium
         resultString = resultString + title;
         return resultString;
     }
+    
+    public String getDigitalString()
+    {
+        String returnString = "Analog";
+        if(digital == false)
+        {}
+        else if (digital == true)
+        {
+            returnString = "Digital";
+        }
+        return returnString;
+    }
+    
+    public String getLongDescription()
+    {
+        String returnString = "Title: " + getTitle()+ " " + getDigitalString();
+        return returnString;
+    }
 }

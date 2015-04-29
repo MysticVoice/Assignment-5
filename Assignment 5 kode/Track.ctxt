@@ -7,4 +7,6 @@ comment1.target=java.time.Duration\ getDuration()
 comment1.text=\r\n\ placeholder\ function\r\n
 comment2.params=
 comment2.target=java.lang.String\ getTitle()
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ getLongDescription()
+numComments=4

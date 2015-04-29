@@ -14,7 +14,9 @@ public class Archive
     private Scanner scan;
     private Mediums activeMediums;
     private Tracks activeTracks;
-
+    private Parser parser;
+    private static int MENY = 4;
+    
     /**
      * Constructor for objects of class Archive
      */
@@ -22,7 +24,48 @@ public class Archive
     {
         register = new Register();
         allMediums = register.combineAllMediums();
+        parser = new Parser();
+        play();
+    }
+    
+    public void play()
+    {
+        System.out.print("Hi folks, let's push some buttons" + "\n");
         printMainMenu();
+        boolean finished = false;
+        while (!finished)
+        {
+            finished = selectMenu();
+        }
+        System.out.println("::::::::::::::::::::::::::::::::::::::::");
+    }
+    
+    private boolean selectMenu()
+    {
+        boolean wantToQuit = false;
+        
+        int value = parser.getUserMenuSelection(MENY);
+        switch(value) {
+            case 1:
+            clear();
+            printSearchMenu();
+            printMainMenu();
+            break;
+            
+            case 2:
+            clear();
+            printListMenu();
+            printMainMenu();
+            break;
+            
+            case 3:
+            break;
+            
+            case 4:
+            clear();
+            return true;
+        }
+        return wantToQuit;
     }
     
     public Mediums selectMediums(int index)
@@ -38,8 +81,9 @@ public class Archive
         return mediums.getMediumsString();
     }
     
-    public Medium searchArchive(String input)
+    public Medium searchArchive()
     {
+        String input =  parser.getStringidi();
         ArchiveList cdArchive = register.getArchive(0);
         ArchiveList tapeArchive = register.getArchive(1);
         Medium medium = null;
@@ -53,7 +97,9 @@ public class Archive
         {
             medium = medium2;
         }
+        System.out.print(medium.getLongDescription());
         return medium;
+        
     }
     
     /**
@@ -97,9 +143,11 @@ public class Archive
                 else if(track.getTitle().toLowerCase().contains(input))
                 {
                     activeTracks.addTrack(track);
+                    System.out.println(something2+". "+track.getLongDescription());
                 }
             }
         }
+        
         return activeTracks;
     }
     
@@ -115,37 +163,42 @@ public class Archive
             for(int something2 = 0; something2 < medium.getSize(); something2++)
             {
                 Track track = medium.getTrack(something2);
-                if(track.getArtist() == null)
-                {}
-                else if(track instanceof FileOnHDD)
+                
+                if(track instanceof FileOnHDD)
                 {
-                    if (track.getTrack() instanceof MusicTrack)
+                    if (((FileOnHDD)track).getTrack() instanceof MusicTrack)
                     {
-                        if(track.getArtist().toLowerCase.contains(input))
+                        if(((FileOnHDD)track).getArtist() == null){}
+                        else if(((FileOnHDD)track).getArtist().toLowerCase().contains(input))
                         {
                             activeTracks.addTrack(track);
+                            System.out.print(something2+". "+track.getLongDescription());
                         }
                     }
                 }
                 else if(track instanceof MusicTrack)
                 {
-                    if(track.getArtist().toLowerCase.contains(input))
+                    if(((MusicTrack)track).getArtist() == null){}
+                    if(((MusicTrack)track).getArtist().toLowerCase().contains(input))
                         {
                             activeTracks.addTrack(track);
+                            System.out.print(something2+". "+track.getLongDescription());
                         }
                 }
             }
         }
+        
         return activeTracks;
     }
     
     private void printMainMenu()
     {
         String menuString = 
-        "--- Main Menu ---" + "\n"
+        "\n"+"--- Main Menu ---" + "\n"
         +"1. Search" + "\n"
         +"2. list" + "\n"
-        +"3. medium" +"\n";
+        +"3. medium" +"\n"
+        +"4. quit" + "\n";
         System.out.print(menuString);
     }
     
@@ -157,6 +210,22 @@ public class Archive
         + "2. Search by title" + "\n"
         + "3. Search by artist" + "\n";
         System.out.print(menuString);
+        
+        searchChoise();
+    }
+    
+    public void searchChoise()
+    {
+        int key = parser.getUserMenuSelection(3);
+        switch(key)
+        {
+            case 1:
+            clear();
+            searchArchive();
+            break;
+            case 2:
+            break;
+        }
     }
     
     public void printList()
@@ -166,6 +235,24 @@ public class Archive
         String mainString = allMediums.getMediumPrintString();
         System.out.print(topThingie);
         System.out.print(mainString);
+    }
+    
+    
+    private void printListMenu()
+    {
+        String returnString =
+        "--- List Menu ---" + "\n"
+        + "1. List All" + "\n"
+        + "2. List CDs" + "\n"
+        + "3. List Tapes" + "\n"
+        + "4. List HDDs" + "\n"
+        + "5. List Music" + "\n";
+        System.out.print(returnString);
+    }
+    
+    public final static void clear()
+    {
+        System.out.print('\u000C');
     }
     
     /**

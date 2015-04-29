@@ -11,4 +11,6 @@ comment2.text=\r\n\ creates\ a\ descriptive\ string\ for\ printing\r\n
 comment3.params=
 comment3.target=java.lang.String\ getText()
 comment3.text=\r\n\ Returns\ gui\ text\r\n
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ getLongDescription()
+numComments=5
