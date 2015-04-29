@@ -5,7 +5,7 @@ import java.time.Duration;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SubTrack extends Track
+public abstract class SubTrack extends Track
 {
     private String title;
     protected Duration duration;
