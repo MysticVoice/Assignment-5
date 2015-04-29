@@ -17,12 +17,18 @@ import javax.swing.border.*;
  */
 public class TrackList extends javax.swing.JFrame {
     private Archive archive;
+    private Tracks tracks;
+    private Medium activeTracks;
+    private Register trackList;
+    
     
     /**
      * Creates new form TrackList
      */
     public TrackList() {
         archive = new Archive();
+        tracks = new Tracks();
+        activeTracks = new Medium();
         initComponents();
     }
 
@@ -52,8 +58,9 @@ public class TrackList extends javax.swing.JFrame {
 
         jList1.setModel(new javax.swing.AbstractListModel() 
         {
-                Mediums activeMediums = archive.selectMediums(0);
-                String[] strings = activeMediums.getMediumsString();
+              
+                          
+                String[] strings = activeTracks.getTracksString();
                 //= { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
                 public int getSize() { return strings.length; }
 

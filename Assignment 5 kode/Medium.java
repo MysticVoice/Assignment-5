@@ -32,7 +32,7 @@ public class Medium
         return tracks.getTrack(index);
     }
     
-        public String[] getTracksString()
+    public String[] getTracksString()
     {
         String[] returnArray;
         int size;

@@ -107,11 +107,6 @@ dependency40.type=UsesDependency
 dependency41.from=GUI
 dependency41.to=Archive
 dependency41.type=UsesDependency
-<<<<<<< HEAD
-dependency42.from=Archive
-dependency42.to=ArchiveList
-dependency42.type=UsesDependency
-=======
 dependency42.from=GUI
 dependency42.to=Mediums
 dependency42.type=UsesDependency
@@ -124,34 +119,27 @@ dependency44.type=UsesDependency
 dependency45.from=TrackType
 dependency45.to=AddJingle
 dependency45.type=UsesDependency
-<<<<<<< HEAD
-dependency46.from=TrackType
-dependency46.to=AddMusic
+dependency46.from=Archive
+dependency46.to=ArchiveList
 dependency46.type=UsesDependency
-dependency47.from=TrackType
-dependency47.to=AddNews
+dependency47.from=GUI
+dependency47.to=TrackList
 dependency47.type=UsesDependency
-dependency48.from=TrackType
-dependency48.to=AddSounds
+dependency48.from=TrackList
+dependency48.to=Archive
 dependency48.type=UsesDependency
 dependency49.from=TrackList
-dependency49.to=TrackType
+dependency49.to=Medium
 dependency49.type=UsesDependency
-=======
->>>>>>> origin/master
->>>>>>> 7e82dfd912689d0f31351d7836cfedeffba9b57a
 dependency5.from=Register
 dependency5.to=Medium
 dependency5.type=UsesDependency
-dependency50.from=GUI
-dependency50.to=TrackList
+dependency50.from=TrackList
+dependency50.to=TrackType
 dependency50.type=UsesDependency
 dependency51.from=TrackList
-dependency51.to=Mediums
+dependency51.to=Tracks
 dependency51.type=UsesDependency
-dependency52.from=TrackList
-dependency52.to=Archive
-dependency52.type=UsesDependency
 dependency6.from=ExternalMedium
 dependency6.to=Track
 dependency6.type=UsesDependency
@@ -165,29 +153,20 @@ dependency9.from=HDD
 dependency9.to=FileOnHDD
 dependency9.type=UsesDependency
 objectbench.height=100
-<<<<<<< HEAD
-objectbench.width=1360
-package.editor.height=545
-package.editor.width=1567
-package.editor.x=72
-package.editor.y=24
-package.numDependencies=42
-=======
 objectbench.width=939
 package.editor.height=1203
 package.editor.width=1146
 package.editor.x=1280
 package.editor.y=0
-<<<<<<< HEAD
-package.numDependencies=52
-=======
-package.numDependencies=45
->>>>>>> origin/master
->>>>>>> 7e82dfd912689d0f31351d7836cfedeffba9b57a
+package.numDependencies=51
 package.numTargets=29
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
+readme.editor.height=700
+readme.editor.width=900
+readme.editor.x=0
+readme.editor.y=0
 target1.editor.height=700
 target1.editor.width=900
 target1.editor.x=0
@@ -214,13 +193,8 @@ target10.x=650
 target10.y=340
 target11.editor.height=700
 target11.editor.width=900
-<<<<<<< HEAD
-target11.editor.x=55
-target11.editor.y=52
-=======
 target11.editor.x=998
 target11.editor.y=105
->>>>>>> 7e82dfd912689d0f31351d7836cfedeffba9b57a
 target11.height=50
 target11.name=ArchiveList
 target11.naviview.expanded=true
@@ -258,8 +232,8 @@ target13.x=230
 target13.y=610
 target14.editor.height=860
 target14.editor.width=800
-target14.editor.x=1023
-target14.editor.y=380
+target14.editor.x=1358
+target14.editor.y=485
 target14.height=50
 target14.name=GUI
 target14.naviview.expanded=true
@@ -282,6 +256,10 @@ target15.typeParameters=
 target15.width=120
 target15.x=100
 target15.y=150
+target16.editor.height=700
+target16.editor.width=900
+target16.editor.x=1320
+target16.editor.y=20
 target16.height=50
 target16.name=AddSounds
 target16.showInterface=false
@@ -343,8 +321,8 @@ target2.x=190
 target2.y=520
 target20.editor.height=780
 target20.editor.width=906
-target20.editor.x=522
-target20.editor.y=80
+target20.editor.x=500
+target20.editor.y=575
 target20.height=50
 target20.name=Tracks
 target20.naviview.expanded=false
@@ -421,8 +399,8 @@ target25.x=520
 target25.y=510
 target26.editor.height=726
 target26.editor.width=670
-target26.editor.x=695
-target26.editor.y=1
+target26.editor.x=231
+target26.editor.y=670
 target26.height=50
 target26.name=Medium
 target26.naviview.expanded=false
@@ -459,8 +437,8 @@ target28.x=1010
 target28.y=420
 target29.editor.height=700
 target29.editor.width=900
-target29.editor.x=183
-target29.editor.y=65
+target29.editor.x=1112
+target29.editor.y=263
 target29.height=50
 target29.name=Track
 target29.naviview.expanded=false
@@ -472,18 +450,8 @@ target29.x=170
 target29.y=460
 target3.editor.height=700
 target3.editor.width=899
-<<<<<<< HEAD
-target3.editor.x=153
-target3.editor.y=23
-=======
-<<<<<<< HEAD
-target3.editor.x=113
-target3.editor.y=344
-=======
-target3.editor.x=244
-target3.editor.y=35
->>>>>>> origin/master
->>>>>>> 7e82dfd912689d0f31351d7836cfedeffba9b57a
+target3.editor.x=1273
+target3.editor.y=168
 target3.height=50
 target3.name=Archive
 target3.naviview.expanded=true
@@ -493,10 +461,10 @@ target3.typeParameters=
 target3.width=80
 target3.x=510
 target3.y=240
-target4.editor.height=700
+target4.editor.height=763
 target4.editor.width=900
-target4.editor.x=714
-target4.editor.y=213
+target4.editor.x=6
+target4.editor.y=164
 target4.height=50
 target4.name=TrackList
 target4.naviview.expanded=true
@@ -519,6 +487,10 @@ target5.typeParameters=
 target5.width=80
 target5.x=390
 target5.y=330
+target6.editor.height=700
+target6.editor.width=900
+target6.editor.x=1320
+target6.editor.y=20
 target6.height=50
 target6.name=AddNews
 target6.showInterface=false
@@ -552,6 +524,10 @@ target8.typeParameters=
 target8.width=110
 target8.x=920
 target8.y=280
+target9.editor.height=700
+target9.editor.width=900
+target9.editor.x=1320
+target9.editor.y=20
 target9.height=50
 target9.name=AddMusic
 target9.showInterface=false

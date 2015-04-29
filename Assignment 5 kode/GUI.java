@@ -86,7 +86,9 @@ public class GUI extends JFrame
         MouseListener mouseListener = new MouseAdapter(){
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2)  {
-                    String selectedItem = (String) jList1.getSelectedValue();
+                    String selectedItem1 = (String) jList1.getSelectedValue();
+                    String selectedItem2 = (String) jList2.getSelectedValue();
+                    String selectedItem3 = (String) jList3.getSelectedValue();
                     
                      TrackList track = new TrackList();
                      track.setVisible(true);
