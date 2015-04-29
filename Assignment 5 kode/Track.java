@@ -29,4 +29,9 @@ public class Track
     {
         return null;
     }
+    
+    public String getText()
+    {
+        return getTitle();
+    }
 }

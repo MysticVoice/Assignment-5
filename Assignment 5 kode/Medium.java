@@ -32,6 +32,19 @@ public class Medium
         return tracks.getTrack(index);
     }
     
+        public String[] getTracksString()
+    {
+        String[] returnArray;
+        int size;
+        size = tracks.getSize();
+        returnArray = new String[size];
+        for(int i = 0; i<size; i++)
+        {
+            returnArray[i] = tracks.getTrack(i).getText();
+        }
+        return returnArray;
+    }
+    
     /**
      * Gets gui text
      */

@@ -35,6 +35,11 @@ public class Tracks
         tracks.add(track);
     }
     
+    public int getSize()
+    {
+        return tracks.size();
+    }
+    
     /**
      * returns total duration
      */
