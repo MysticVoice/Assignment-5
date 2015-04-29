@@ -60,6 +60,17 @@ public class Mediums
         return returnArray;
     }
     
+    public String getMediumPrintString()
+    {
+        String returnString = "";
+        int size = getSize();
+        for(int i = 0; i<size; i++)
+        {
+            returnString += "\n"+ i + ". " + mediums.get(i).getText();
+        }
+        return returnString;
+    }
+    
     /**
      * replaces a medium with another
      */
