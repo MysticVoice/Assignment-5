@@ -10,7 +10,10 @@ import java.io.*;
 public class Archive
 {
     private Register register;
+    private Mediums allMediums;
     private Scanner scan;
+    private Mediums activeMediums;
+    private Tracks activeTracks;
 
     /**
      * Constructor for objects of class Archive
@@ -18,7 +21,8 @@ public class Archive
     public Archive()
     {
         register = new Register();
-        //activeMedium = getCDList().get(0);
+        allMediums = register.combineAllMediums();
+        printMainMenu();
     }
     
     public Mediums selectMediums(int index)
@@ -52,17 +56,6 @@ public class Archive
         return medium;
     }
     
-    public Mediums combineMediums(Mediums mediums1, Mediums mediums2)
-    {
-        Mediums mediums = mediums1;
-        for(int index = 0; index < mediums2.getSize();index++)
-        {
-            Medium medium = mediums2.getMedium(index);
-            mediums.addMedium(medium);
-        }
-        return mediums;
-    }
-    
     /**
      * Searches for cd with an artist string that contains the input string
      */
@@ -87,46 +80,92 @@ public class Archive
         return medium;
     }
     
-//         /**
-//      * Searches for cd with an artist string that contains the input string
-//      */
-//     public Medium searchByTitle(String input,ArchiveList list)
-//     {
-//         Medium medium=null;
-//         Mediums listMediums = list.getMediums();
-//         scan = new Scanner(input);
-//         if(scan.hasNext())
-//         {
-//             
-
-//             int listValue = list.getSpecific()+1;
-//             if (arcNr >= listValue)
-//             {
-//                 int index = arcNr - listValue;
-//                 if(index <= listMediums.getSize())
-//                 {
-//                     medium = listMediums.getMedium(index);
-//                 }
-//             }
-//         }
-//         return medium;
-//     }
-    
-    public String getStringidi() 
-
-    { BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        String userName = null;
-
-        //  read the username from the command-line; need to use try/catch with the
-        //  readLine() method
-        try {
-            userName = br.readLine();
-        } catch (IOException ioe) {
-            System.out.println("IO error trying to read your text!");
-            System.exit(1);
+    /**
+     * Searches for cd with an artist string that contains the input string
+     */
+    public Tracks searchByTitle(String input)
+    {
+        activeTracks=new Tracks();
+        for(int something = 0; something < allMediums.getSize(); something++)
+        {
+            Medium medium=allMediums.getMedium(something);
+            for(int something2 = 0; something2 < medium.getSize(); something2++)
+            {
+                Track track = medium.getTrack(something2);
+                if(track.getTitle()== null)
+                {}
+                else if(track.getTitle().toLowerCase().contains(input))
+                {
+                    activeTracks.addTrack(track);
+                }
+            }
         }
-        return userName;
+        return activeTracks;
+    }
+    
+        /**
+     * Searches for cd with an artist string that contains the input string
+     */
+    public Tracks searchByArtist(String input)
+    {
+        activeTracks=new Tracks();
+        for(int something = 0; something < allMediums.getSize(); something++)
+        {
+            Medium medium=allMediums.getMedium(something);
+            for(int something2 = 0; something2 < medium.getSize(); something2++)
+            {
+                Track track = medium.getTrack(something2);
+                if(track.getArtist() == null)
+                {}
+                else if(track instanceof FileOnHDD)
+                {
+                    if (track.getTrack() instanceof MusicTrack)
+                    {
+                        if(track.getArtist().toLowerCase.contains(input))
+                        {
+                            activeTracks.addTrack(track);
+                        }
+                    }
+                }
+                else if(track instanceof MusicTrack)
+                {
+                    if(track.getArtist().toLowerCase.contains(input))
+                        {
+                            activeTracks.addTrack(track);
+                        }
+                }
+            }
+        }
+        return activeTracks;
+    }
+    
+    private void printMainMenu()
+    {
+        String menuString = 
+        "--- Main Menu ---" + "\n"
+        +"1. Search" + "\n"
+        +"2. list" + "\n"
+        +"3. medium" +"\n";
+        System.out.print(menuString);
+    }
+    
+    private void printSearchMenu()
+    {
+        String menuString =
+        "--- Search ---" + "\n"
+        + "1. Search by archive number" + "\n"
+        + "2. Search by title" + "\n"
+        + "3. Search by artist" + "\n";
+        System.out.print(menuString);
+    }
+    
+    public void printList()
+    {
+        String topThingie = "We found " + allMediums.getSize() + " mediums." + "\n"
+        +"To edit an item type : Edit (index)" + "\n";
+        String mainString = allMediums.getMediumPrintString();
+        System.out.print(topThingie);
+        System.out.print(mainString);
     }
     
     /**

@@ -5,7 +5,7 @@ import java.time.Duration;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Track
+public abstract class Track
 {
 
     /**
@@ -17,21 +17,8 @@ public class Track
     /**
      * placeholder function
      */
-    public Duration getDuration()
-    {
-        return null;
-    }
+    abstract protected Duration getDuration();
     
-    /**
-     * placeholder function
-     */
-    public String getTitle()
-    {
-        return null;
-    }
-    
-    public String getText()
-    {
-        return getTitle();
-    }
+    abstract protected String getTitle();
+
 }

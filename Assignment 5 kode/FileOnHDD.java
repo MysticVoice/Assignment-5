@@ -30,4 +30,8 @@ public class FileOnHDD extends Track
     {
         return track.getDuration();
     }
+    public String getTitle()
+    {
+        return track.getTitle();
+    }
 }

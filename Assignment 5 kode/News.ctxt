@@ -1,5 +1,20 @@
 #BlueJ class context
-comment0.params=title\ min\ sec\ summary
-comment0.target=News(java.lang.String,\ long,\ long,\ java.lang.String)
+comment0.params=title\ journalist\ min\ sec\ summary
+comment0.target=News(java.lang.String,\ java.lang.String,\ long,\ long,\ java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ News\r\n
-numComments=1
+comment1.params=
+comment1.target=java.lang.String\ getSummary()
+comment1.text=\r\n\ returns\ the\ newsStory\ \r\n\ @return\ the\ newsStory\r\n
+comment2.params=
+comment2.target=java.lang.String\ getJournalist()
+comment2.text=\r\n\ returns\ the\ journalist\ \r\n\ @return\ the\ journalist\r\n
+comment3.params=newSummary
+comment3.target=void\ setSummary(java.lang.String)
+comment3.text=\r\n\ change\ times\ played\r\n
+comment4.params=
+comment4.target=java.util.Calendar\ date()
+comment4.text=\r\n\ change\ dateMade\r\n
+comment5.params=journalist
+comment5.target=void\ setJournalist(java.lang.String)
+comment5.text=\r\n\ change\ dateBroadcasted\r\n
+numComments=6

@@ -25,6 +25,27 @@ public class Register
         return archiveLists.get(index);
     }
     
+    public Mediums combineMediums(Mediums mediums1, Mediums mediums2)
+    {
+        Mediums mediums = mediums1;
+        for(int index = 0; index < mediums2.getSize();index++)
+        {
+            Medium medium = mediums2.getMedium(index);
+            mediums.addMedium(medium);
+        }
+        return mediums;
+    }
+    
+    public Mediums combineAllMediums()
+    {
+        Mediums cds = mediumsList.get(0);
+        Mediums harddisks = mediumsList.get(1);
+        Mediums tapes = mediumsList.get(2);
+        Mediums mediums = combineMediums(cds, harddisks);
+        mediums = combineMediums(mediums, tapes);
+        return mediums;
+    }
+    
     /**
      * creates all medium objects and track objects
      */
@@ -94,9 +115,9 @@ public class Register
     /**
      * creates a news file
      */
-    private News createNews(String title, long min, long sec, String summary)
+    private News createNews(String title, String journalist, long min, long sec, String summary)
     {
-        News track = new News(title, min, sec, summary);
+        News track = new News(title, journalist, min, sec, summary);
         return track;
     }
     
