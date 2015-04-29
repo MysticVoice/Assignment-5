@@ -16,11 +16,13 @@ import javax.swing.border.*;
  * @author Vidar
  */
 public class TrackList extends javax.swing.JFrame {
-
+    private Archive archive;
+    
     /**
      * Creates new form TrackList
      */
     public TrackList() {
+        archive = new Archive();
         initComponents();
     }
 
@@ -48,10 +50,23 @@ public class TrackList extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Centaur", 0, 24)); // NOI18N
         jLabel1.setText("Track List");
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+        jList1.setModel(new javax.swing.AbstractListModel() 
+        {
+                Mediums activeMediums = archive.selectMediums(0);
+                String[] strings = activeMediums.getMediumsString();
+                //= { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+                public int getSize() { return strings.length; }
+
+                public Object getElementAt(int i) { return strings[i]; }
+            });
+            jList1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jList1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
         });
         jScrollPane1.setViewportView(jList1);
 
@@ -148,6 +163,9 @@ public class TrackList extends javax.swing.JFrame {
                 new TrackList().setVisible(true);
             }
         });
+    }
+     private void jList1AncestorAdded(javax.swing.event.AncestorEvent evt) {                                     
+        // TODO add your handling code here:
     }
 
     // Variables declaration - do not modify                     

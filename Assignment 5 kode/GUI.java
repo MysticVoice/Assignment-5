@@ -10,12 +10,14 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.event.*;
 import javax.swing.border.*;
+import javax.swing.JFrame;
 
 /**
  *
  * @author Vidar
  */
-public class GUI extends javax.swing.JFrame {
+public class GUI extends JFrame
+             {
     private Archive archive;
 
     /**
@@ -81,6 +83,23 @@ public class GUI extends javax.swing.JFrame {
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
+        MouseListener mouseListener = new MouseAdapter(){
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2)  {
+                    String selectedItem = (String) jList1.getSelectedValue();
+                    
+                     TrackList track = new TrackList();
+                     track.setVisible(true);
+                     
+                     
+                    }
+                }
+            };
+        jList1.addMouseListener(mouseListener);
+        jList2.addMouseListener(mouseListener);
+        jList3.addMouseListener(mouseListener);
+                    
+                    
             
           jList2.setModel(new javax.swing.AbstractListModel() 
         {
@@ -100,6 +119,8 @@ public class GUI extends javax.swing.JFrame {
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
+        
+        
             
               jList3.setModel(new javax.swing.AbstractListModel() 
         {
@@ -139,7 +160,10 @@ public class GUI extends javax.swing.JFrame {
 
                 }});
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CD", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Title", "Artist", "ArchiveNr"}));
+        //jComboBox1.addItemListener();
+        
+        
 
         jButton7.setText("Search");        
         jButton7.addActionListener(new java.awt.event.ActionListener() {
