@@ -20,6 +20,11 @@ public class Register
         fillRegister();
     }
     
+    public ArchiveList getArchive(int index)
+    {
+        return archiveLists.get(index);
+    }
+    
     /**
      * creates all medium objects and track objects
      */
@@ -149,10 +154,10 @@ public class Register
     /**
      * makes a new Tape
      */
-    private Tape createTape(boolean digital)
+    private Tape createTape(boolean digital, String title)
     {
         Mediums tapes = mediumsList.get(2);
-        Tape tape = new Tape(digital);
+        Tape tape = new Tape(digital,title);
         tapes.addMedium(tape);
         return tape;
     }

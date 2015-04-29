@@ -1,5 +1,9 @@
 #BlueJ class context
-comment0.params=digital
-comment0.target=Tape(boolean)
+comment0.params=digital\ title
+comment0.target=Tape(boolean,\ java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tape\r\n
-numComments=1
+comment1.params=
+comment1.target=java.lang.String\ getTitle()
+comment2.params=
+comment2.target=java.lang.String\ getText()
+numComments=3
