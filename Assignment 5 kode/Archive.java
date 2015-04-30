@@ -47,7 +47,7 @@ public class Archive
         int value = parser.getUserMenuSelection(MENY);
         switch(value) {
             case 1:
-            clear();
+            clear();             
             printSearchMenu();
             printMainMenu();
             break;
