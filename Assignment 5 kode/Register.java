@@ -41,7 +41,9 @@ public class Register
         Mediums cds = mediumsList.get(0);
         Mediums harddisks = mediumsList.get(1);
         Mediums tapes = mediumsList.get(2);
-        Mediums mediums = combineMediums(cds, harddisks);
+        Mediums mediums = new Mediums();
+        mediums = combineMediums(mediums, cds);
+        mediums = combineMediums(mediums, harddisks);
         mediums = combineMediums(mediums, tapes);
         return mediums;
     }
@@ -139,14 +141,6 @@ public class Register
         FileOnHDD result;
         result = new FileOnHDD(track,path);
         return result;
-    }
-    
-    /**
-     * returns mediumsList
-     */
-    public ArrayList<Mediums> getMediumsList()
-    {
-        return mediumsList;
     }
     
     /**

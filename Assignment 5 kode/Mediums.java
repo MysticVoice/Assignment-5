@@ -67,7 +67,8 @@ public class Mediums
         for(int i = 0; i<size; i++)
         {
             Medium medium = mediums.get(i);
-            returnString += "\n"+ i + ". " +medium.getText() + "  medium: " + getType(medium); 
+            returnString += "\n"+ i + ". " +medium.getText() + "  medium: " + getType(medium)+
+            medium.getTracksDescription();
         }
         return returnString;
     }

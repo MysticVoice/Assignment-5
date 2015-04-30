@@ -55,7 +55,7 @@ public class Medium
         String returnString;
         int size;
         size = tracks.getSize();
-        returnString = "";
+        returnString = "\n";
         for(int i = 0; i<size; i++)
         {
             returnString += tracks.getTrack(i).getLongDescription() + "\n";

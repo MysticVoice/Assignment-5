@@ -70,9 +70,9 @@ public class MusicTrack extends SubTrack
 
     public String getDateLastPlayed()
     {
-        String returnString = "YEAR: " + dateLastPlayed.get(dateLastPlayed.YEAR);
-        returnString += "MONTH: " + (dateLastPlayed.get(dateLastPlayed.MONTH)+1);
-        returnString += "DATE: " + dateLastPlayed.get(dateLastPlayed.DATE);
+        String returnString = "YEAR: " + dateLastPlayed.get(dateLastPlayed.YEAR)+" ";
+        returnString += "MONTH: " + (dateLastPlayed.get(dateLastPlayed.MONTH)+1)+" ";
+        returnString += "DATE: " + dateLastPlayed.get(dateLastPlayed.DATE)+" ";
         return returnString;
     }
 
