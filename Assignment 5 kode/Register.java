@@ -233,7 +233,7 @@ public class Register
     /**
      * creates a music track
      */
-    private MusicTrack createMusicTrack(String title, String artist, long min, long sec)
+    public MusicTrack createMusicTrack(String title, String artist, long min, long sec)
     {
         MusicTrack track = new MusicTrack(title, artist, min, sec);
         return track;
@@ -242,7 +242,7 @@ public class Register
     /**
      * creates an advertising jingle
      */
-    private AdvertisingJingle createAdvJingle(String title, long min, long sec, String product, String company)
+    public AdvertisingJingle createAdvJingle(String title, long min, long sec, String product, String company)
     {
         AdvertisingJingle track = new AdvertisingJingle(title, min, sec, product, company);
         return track;
@@ -251,7 +251,7 @@ public class Register
     /**
      * creates a news file
      */
-    private News createNews(String title, String journalist, long min, long sec, String summary)
+    public News createNews(String title, String journalist, long min, long sec, String summary)
     {
         News track = new News(title, journalist, min, sec, summary);
         return track;
@@ -260,7 +260,7 @@ public class Register
     /**
      * creates a sound effect
      */
-    private SoundEffect createSoundEffect(String title, long min, long sec, String description)
+    public SoundEffect createSoundEffect(String title, long min, long sec, String description)
     {
         SoundEffect track = new SoundEffect(title, min, sec, description);
         return track;
@@ -270,7 +270,7 @@ public class Register
     /**
      * creates a file for harddisk storage
      */
-    private FileOnHDD createFileOnHDD(SubTrack track, String path)
+    public FileOnHDD createFileOnHDD(SubTrack track, String path)
     {
         FileOnHDD result;
         result = new FileOnHDD(track,path);

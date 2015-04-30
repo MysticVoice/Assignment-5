@@ -59,6 +59,7 @@ public class Archive
             break;
             
             case 3:
+            printAddMediumMenu();
             clear();
             
             break;
@@ -263,6 +264,62 @@ public class Archive
         return activeTracks;
     }
     
+    private void selectTrackType(int index)
+    {
+        
+        int key = parser.getUserMenuSelection(5);
+        switch(key)
+        {
+            case 1:
+            clear();
+            addMusicTrackParsing(index);
+            break;
+            case 2:
+            clear();
+            //addAdvertisingJingleParsing(index);
+            break;
+            case 3:
+            clear();
+            //addNewsParsing(index);
+            break;
+            case 4:
+            clear();
+            //addSoundEffectParsing(index);
+            break;
+        }
+        
+    }
+    
+    private void addMusicTrackParsing(int index)
+    {
+        clear();
+        System.out.println("Type the song title.");
+        String title = parser.getStringidi();
+        clear();
+        System.out.println("Type the name of the artist.");
+        String artist = parser.getStringidi();
+        clear();
+        System.out.println("Type the length in minutes");
+        long minutes = parser.getUserMenuSelection(60); 
+        System.out.println("Type the remaining length in seconds.");
+        long seconds = parser.getUserMenuSelection(60);
+        
+        Medium medium = activeMediums.getMedium(index);
+        medium.addTrack(register.createMusicTrack(title, artist, minutes, seconds));
+        
+        //cd.addTrack(createMusicTrack("Remnants", "Disturbed", 2, 43));
+    }
+    
+    private void editMediumSelect(int index)
+    {
+        
+    }
+    
+    private void addMedium()
+    {
+        
+    }
+    
     private void printMainMenu()
     {
         String menuString = 
@@ -274,7 +331,18 @@ public class Archive
         System.out.print(menuString);
     }
     
-    private void printAddMenu()
+    private void printAddTrackMenu()
+    {
+        String menuString = "\n" + "--- Add Track ---" + "\n"
+        +"1. Add Music Track" + "\n"
+        +"2. Add Advertising Jingle" + "\n"
+        +"3. Add News" +"\n"
+        +"4. Add Sound Effect" + "\n"
+        +"5. Return to Main Menu" + "\n";
+        System.out.print(menuString);
+    }
+    
+    private void printAddMediumMenu()
     {
         String menuString = 
         "\n"+"--- Main Menu ---" + "\n"
@@ -335,30 +403,34 @@ public class Archive
             case 1:
             clear();
             System.out.println(tellUsWhatToDo() + "List of all media and tracks");
-            
             list(allMediums);
+            editOrAdd();
             break;
             case 2:
             clear();
             System.out.println(tellUsWhatToDo()+"List of CDs.");
             list(cds);
+            editOrAdd();
             break;
             
             case 3:
             clear();
             System.out.println(tellUsWhatToDo()+"List of Tapes.");
             list(tapes);
+            editOrAdd();
             break;
             case 4:
             clear();
             System.out.println(tellUsWhatToDo()+"List of Harddisks.");
             list(harddisks);
+            editOrAdd();
             break;
             
             case 5:
             clear();
             System.out.println(tellUsWhatToDo()+"List of Music.");
             listMusic();
+            editOrAdd();
             break;
             
             case 6:
@@ -368,12 +440,35 @@ public class Archive
         }
     }
     
+    /**
+     * Selects edit or add functions for a medium
+     */
     private void editOrAdd()
     {
         int maxSize = activeMediums.getSize();
         String stringy = parser.getStringidi();
-        
-        
+        stringy = stringy.toLowerCase();
+        if(stringy.contains("edit") || stringy.contains("add"))
+        {
+            clear();
+            list(activeMediums);
+            System.out.println("\n"+"Select a medium by typing its index number.");
+            int index = parser.getUserMenuSelection(maxSize);
+            if(stringy.contains("edit"))
+            {
+                clear();
+                editMediumSelect(index);
+            }
+            
+            else if(stringy.contains("add"))
+            {
+                clear();
+                printAddTrackMenu();
+                selectTrackType(index);
+            }
+        }
+        clear();
+
     }
     
     public String tellUsWhatToDo()
@@ -394,7 +489,7 @@ public class Archive
         System.out.print(topThingie);
         System.out.print(mainString);
         activeMediums = mediums;
-        editOrAdd();
+        
     }
     
     
