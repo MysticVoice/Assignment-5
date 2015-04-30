@@ -129,9 +129,11 @@ public class Archive
     /**
      * Searches for cd with an artist string that contains the input string
      */
-    public Tracks searchByTitle(String input)
+    public Tracks searchByTitle()
     {
+        String input =  parser.getStringidi();
         activeTracks=new Tracks();
+        int stuffs = 0;
         for(int something = 0; something < allMediums.getSize(); something++)
         {
             Medium medium=allMediums.getMedium(something);
@@ -143,7 +145,8 @@ public class Archive
                 else if(track.getTitle().toLowerCase().contains(input))
                 {
                     activeTracks.addTrack(track);
-                    System.out.println(something2+". "+track.getLongDescription());
+                    stuffs++;
+                    System.out.println(stuffs+". "+track.getLongDescription());
                 }
             }
         }
@@ -154,9 +157,11 @@ public class Archive
         /**
      * Searches for cd with an artist string that contains the input string
      */
-    public Tracks searchByArtist(String input)
+    public Tracks searchByArtist()
     {
+        String input =  parser.getStringidi();
         activeTracks=new Tracks();
+        int stuffs= 0;
         for(int something = 0; something < allMediums.getSize(); something++)
         {
             Medium medium=allMediums.getMedium(something);
@@ -172,7 +177,8 @@ public class Archive
                         else if(((FileOnHDD)track).getArtist().toLowerCase().contains(input))
                         {
                             activeTracks.addTrack(track);
-                            System.out.print(something2+". "+track.getLongDescription());
+                            stuffs++;
+                            System.out.print(stuffs+". "+track.getLongDescription());
                         }
                     }
                 }
@@ -182,7 +188,8 @@ public class Archive
                     if(((MusicTrack)track).getArtist().toLowerCase().contains(input))
                         {
                             activeTracks.addTrack(track);
-                            System.out.print(something2+". "+track.getLongDescription());
+                            stuffs++;
+                            System.out.print(stuffs+". "+track.getLongDescription());
                         }
                 }
             }
@@ -221,9 +228,12 @@ public class Archive
         {
             case 1:
             clear();
+            System.out.println("Search archive");
             searchArchive();
             break;
             case 2:
+            clear();
+            searchByTitle();
             break;
         }
     }
