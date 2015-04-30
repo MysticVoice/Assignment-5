@@ -18,11 +18,24 @@ dependency6.from=TrackType
 dependency6.to=AddJingle
 dependency6.type=UsesDependency
 objectbench.height=100
+<<<<<<< Updated upstream
 objectbench.width=353
 package.editor.height=400
 package.editor.width=560
+<<<<<<< Updated upstream
 package.editor.x=1584
 package.editor.y=372
+=======
+package.editor.x=489
+package.editor.y=117
+=======
+objectbench.width=415
+package.editor.height=491
+package.editor.width=612
+package.editor.x=1072
+package.editor.y=23
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 package.numDependencies=6
 package.numTargets=13
 package.showExtends=true
@@ -30,8 +43,8 @@ package.showUses=true
 project.charset=UTF-8
 target1.editor.height=700
 target1.editor.width=900
-target1.editor.x=1520
-target1.editor.y=440
+target1.editor.x=1020
+target1.editor.y=320
 target1.height=50
 target1.name=AddCD
 target1.naviview.expanded=true
@@ -41,10 +54,22 @@ target1.typeParameters=
 target1.width=80
 target1.x=450
 target1.y=310
+<<<<<<< Updated upstream
 target10.editor.height=700
 target10.editor.width=900
+<<<<<<< Updated upstream
 target10.editor.x=379
 target10.editor.y=340
+=======
+target10.editor.x=340
+target10.editor.y=161
+=======
+target10.editor.height=959
+target10.editor.width=1011
+target10.editor.x=2
+target10.editor.y=23
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 target10.height=50
 target10.name=TrackType
 target10.naviview.expanded=true
@@ -95,8 +120,8 @@ target13.x=0
 target13.y=320
 target2.editor.height=700
 target2.editor.width=900
-target2.editor.x=1520
-target2.editor.y=440
+target2.editor.x=1020
+target2.editor.y=320
 target2.height=50
 target2.name=AddTape
 target2.naviview.expanded=true
@@ -160,8 +185,13 @@ target6.x=0
 target6.y=200
 target7.editor.height=686
 target7.editor.width=900
+<<<<<<< Updated upstream
 target7.editor.x=483
 target7.editor.y=397
+=======
+target7.editor.x=1020
+target7.editor.y=320
+>>>>>>> Stashed changes
 target7.height=50
 target7.name=SearchList
 target7.naviview.expanded=true
@@ -173,8 +203,13 @@ target7.x=290
 target7.y=310
 target8.editor.height=700
 target8.editor.width=900
+<<<<<<< Updated upstream
 target8.editor.x=1520
 target8.editor.y=440
+=======
+target8.editor.x=352
+target8.editor.y=320
+>>>>>>> Stashed changes
 target8.height=50
 target8.name=AddJingle
 target8.naviview.expanded=true

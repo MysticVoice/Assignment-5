@@ -65,6 +65,7 @@ public class FrameDisplayTest implements ActionListener
     public static void main(String[] args)
     {   
         /*
+         * 
          * This is the most important part ofyour GUI app, never forget 
          * to schedule a job for your event dispatcher thread : 
          * by calling the function, method or constructor, responsible

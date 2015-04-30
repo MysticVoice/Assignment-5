@@ -150,6 +150,7 @@ public class GUI extends JFrame
         jButton4.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     MediumSelect medium = new MediumSelect();
+                    
                     medium.setVisible(true);
                 }
             });
@@ -158,25 +159,26 @@ public class GUI extends JFrame
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) 
                 {
-                    
-
+                    setEnabled(true);
+             
                 }});
+
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Title", "Artist", "ArchiveNr"}));
         //jComboBox1.addItemListener();
         
         
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CD", "Tape", "Track", "Item 4" }));
+
+
         jButton7.setText("Search");        
         jButton7.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    if (jTextField1.getText().length() > 0)
+                  
                     {
-                        
-                        
-                            SearchList search = new SearchList();
-                            search.setVisible(true);
-                        
+                     
+                         
 
                     }
                     

@@ -1,10 +1,10 @@
 #BlueJ package file
 objectbench.height=100
-objectbench.width=363
+objectbench.width=373
 package.editor.height=400
 package.editor.width=570
-package.editor.x=1120
-package.editor.y=52
+package.editor.x=1194
+package.editor.y=43
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -13,7 +13,7 @@ project.charset=UTF-8
 target1.editor.height=971
 target1.editor.width=900
 target1.editor.x=1020
-target1.editor.y=53
+target1.editor.y=23
 target1.height=50
 target1.name=FrameDisplayTest
 target1.naviview.expanded=false

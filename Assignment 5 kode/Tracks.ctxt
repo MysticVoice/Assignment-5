@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Tracks()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tracks\r\n
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Tracks\n
 comment1.params=index
 comment1.target=Track\ getTrack(int)
-comment1.text=\r\n\ returns\ a\ track\r\n
+comment1.text=\n\ returns\ a\ track\n
 comment2.params=track
 comment2.target=void\ addTrack(Track)
-comment2.text=\r\n\ adds\ a\ track\r\n
+comment2.text=\n\ adds\ a\ track\n
 comment3.params=
 comment3.target=int\ getSize()
 comment4.params=
 comment4.target=java.time.Duration\ getTime()
-comment4.text=\r\n\ returns\ total\ duration\r\n
+comment4.text=\n\ returns\ total\ duration\n
 numComments=5

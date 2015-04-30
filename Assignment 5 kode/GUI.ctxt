@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=
 comment0.target=GUI()
-comment0.text=\r\n\ Creates\ new\ form\ GUI\r\n
+comment0.text=\n\ Creates\ new\ form\ GUI\n
 comment1.params=
 comment1.target=void\ initComponents()
-comment1.text=\r\n\ This\ method\ is\ called\ from\ within\ the\ constructor\ to\ initialize\ the\ form.\r\n\ WARNING\:\ Do\ NOT\ modify\ this\ code.\ The\ content\ of\ this\ method\ is\ always\r\n\ regenerated\ by\ the\ Form\ Editor.\r\n
+comment1.text=\n\ This\ method\ is\ called\ from\ within\ the\ constructor\ to\ initialize\ the\ form.\n\ WARNING\:\ Do\ NOT\ modify\ this\ code.\ The\ content\ of\ this\ method\ is\ always\n\ regenerated\ by\ the\ Form\ Editor.\n
 comment10.params=i
 comment10.target=java.lang.Object\ getElementAt(int)
 comment11.params=evt
@@ -39,7 +39,7 @@ comment24.params=evt
 comment24.target=void\ jTextField1ActionPerformed(java.awt.event.ActionEvent)
 comment25.params=args
 comment25.target=void\ main(java.lang.String[])
-comment25.text=\r\n\ @param\ args\ the\ command\ line\ arguments\r\n
+comment25.text=\n\ @param\ args\ the\ command\ line\ arguments\n
 comment26.params=
 comment26.target=void\ run()
 comment27.params=evt

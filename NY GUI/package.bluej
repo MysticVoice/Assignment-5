@@ -12,6 +12,7 @@ dependency4.from=GUI
 dependency4.to=RemoveTapes
 dependency4.type=UsesDependency
 objectbench.height=100
+<<<<<<< Updated upstream
 objectbench.width=459
 package.editor.height=663
 package.editor.width=666
@@ -41,10 +42,37 @@ target2.editor.x=543
 target2.editor.y=384
 target2.height=50
 target2.name=AddCDs
+=======
+objectbench.width=373
+package.editor.height=347
+package.editor.width=570
+package.editor.x=975
+package.editor.y=67
+package.numDependencies=0
+package.numTargets=2
+package.showExtends=true
+package.showUses=true
+project.charset=UTF-8
+target1.height=50
+target1.name=NewJFrame12
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=110
+target1.x=70
+target1.y=10
+target2.editor.height=736
+target2.editor.width=791
+target2.editor.x=10
+target2.editor.y=35
+target2.height=50
+target2.name=MainWindow
+>>>>>>> Stashed changes
 target2.naviview.expanded=true
 target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
+<<<<<<< Updated upstream
 target2.width=90
 target2.x=220
 target2.y=380
@@ -87,3 +115,8 @@ target5.typeParameters=
 target5.width=90
 target5.x=220
 target5.y=330
+=======
+target2.width=100
+target2.x=190
+target2.y=170
+>>>>>>> Stashed changes

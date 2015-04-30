@@ -1,5 +1,9 @@
 *.class
 *.class
+<<<<<<< Updated upstream
 *.class
 *.class
 *.class
+=======
+/Assignment 5 kode/nbproject/private/
+>>>>>>> Stashed changes
