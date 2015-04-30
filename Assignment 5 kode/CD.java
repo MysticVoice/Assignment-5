@@ -23,6 +23,26 @@ public class CD extends ExternalMedium
         this.label = label;
     }
     
+    public void setAlbum(String input)
+    {
+        this.album = input;
+    }
+    
+    public void setArtist(String input)
+    {
+        this.artist = input;
+    }
+    
+    public void setLabel(String input)
+    {
+        this.label = input;
+    }
+    
+    public void setYearReleased(int input)
+    {
+        this.yearReleased = input;
+    }
+    
     /**
      * returns artist
      */

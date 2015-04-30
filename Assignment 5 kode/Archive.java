@@ -10,7 +10,6 @@ import java.io.*;
 public class Archive
 {
     private Register register;
-    private Mediums allMediums;
     private Scanner scan;
     private Mediums activeMediums;
     private Tracks activeTracks;
@@ -23,10 +22,17 @@ public class Archive
     public Archive()
     {
         register = new Register();
-        allMediums = register.combineAllMediums();
         parser = new Parser();
         play();
     }
+    
+    public Mediums allMediums()
+    {
+        Mediums allMediums = register.combineAllMediums();
+        return allMediums;
+        
+    }
+    
     
     public void play()
     {
@@ -149,9 +155,9 @@ public class Archive
         System.out.println("To edit a track type: Edit.");
         activeTracks=new Tracks();
         int stuffs = 0;
-        for(int something = 0; something < allMediums.getSize(); something++)
+        for(int something = 0; something < allMediums().getSize(); something++)
         {
-            Medium medium=allMediums.getMedium(something);
+            Medium medium=allMediums().getMedium(something);
             for(int something2 = 0; something2 < medium.getSize(); something2++)
             {
                 Track track = medium.getTrack(something2);
@@ -181,9 +187,9 @@ public class Archive
         System.out.println("To edit a track type: Edit (index).");
         activeTracks=new Tracks();
         int stuffs= 0;
-        for(int something = 0; something < allMediums.getSize(); something++)
+        for(int something = 0; something < allMediums().getSize(); something++)
         {
-            Medium medium=allMediums.getMedium(something);
+            Medium medium=allMediums().getMedium(something);
             for(int something2 = 0; something2 < medium.getSize(); something2++)
             {
                 Track track = medium.getTrack(something2);
@@ -228,9 +234,9 @@ public class Archive
     {
         activeTracks=new Tracks();
         int stuffs= 0;
-        for(int something = 0; something < allMediums.getSize(); something++)
+        for(int something = 0; something < allMediums().getSize(); something++)
         {
-            Medium medium=allMediums.getMedium(something);
+            Medium medium=allMediums().getMedium(something);
             for(int something2 = 0; something2 < medium.getSize(); something2++)
             {
                 Track track = medium.getTrack(something2);
@@ -305,14 +311,96 @@ public class Archive
         long seconds = parser.getUserMenuSelection(60);
         
         Medium medium = activeMediums.getMedium(index);
+        
+        if(medium instanceof HDD)
+        {
+            clear();
+            System.out.println("Type the path for the file");
+            SubTrack track = register.createMusicTrack(title, artist, minutes, seconds);
+            String path = parser.getStringidi();
+            medium.addTrack(register.createFileOnHDD(track, path));
+        }
+        
         medium.addTrack(register.createMusicTrack(title, artist, minutes, seconds));
         
         //cd.addTrack(createMusicTrack("Remnants", "Disturbed", 2, 43));
     }
     
-    private void editMediumSelect(int index)
+    private void printEditMediumSelect(int index)
     {
+        String menuString =
+        "\n"+"---Select field to modify---" + "\n";
+        Medium medium = activeMediums.getMedium(index);
+        if (medium instanceof CD)
+        {
+            menuString = menuString
+            +"1. Edit album name." + "\n"
+            +"2. Edit artist name." + "\n"
+            +"3. Edit year made." + "\n"
+            +"4. Edit label." + "\n"
+            +"5. Return to Main Menu." + "\n";
+            System.out.println(menuString);
+            editMediumSelectCD(index);
+        }
+        else if(medium instanceof Tape)
+        {
+            menuString = menuString
+            +"1. Edit title." + "\n"
+            +"2. Edit digital." + "\n"
+            +"3. Return to Main Menu." + "\n";
+            System.out.println(menuString);
+            //editMediumSelectTape(index);
+        }
+        else if(medium instanceof HDD)
+        {
+            menuString = menuString
+            +"1. Edit name." + "\n"
+            +"2. Return to Main Menu." + "\n";
+            System.out.println(menuString);
+            //editMediumSelectHDD(index);
+        }
         
+    }
+    
+    private void editMediumSelectCD(int index)
+    {
+        Medium medium = activeMediums.getMedium(index);
+        Mediums cds = register.getMediums(0);
+        int key = parser.getUserMenuSelection(5);
+        String input;
+        switch(key)
+        {
+            case 1:
+            clear();
+            System.out.println("Type a new album name.");
+            input = parser.getStringidi();
+            ((CD)medium).setAlbum(input);
+            break;
+            case 2:
+            clear();
+            System.out.println("Type a new artist name.");
+            input = parser.getStringidi();
+            ((CD)medium).setArtist(input);
+            break;
+            case 3:
+            clear();
+            System.out.println("Type a new year released.");
+            int year = parser.getUserMenuSelection(3000);
+            ((CD)medium).setYearReleased(year);
+            break;
+            
+            case 4:
+            clear();
+            System.out.println("Type a new label.");
+            input = parser.getStringidi();
+            ((CD)medium).setLabel(input);
+            
+            break;
+            
+            case 5:
+            clear();
+            break;
+        }
     }
     
     private void printMainMenu()
@@ -440,7 +528,7 @@ public class Archive
             case 1:
             clear();
             System.out.println(tellUsWhatToDo() + "List of all media and tracks");
-            list(allMediums);
+            list(allMediums());
             editOrAdd();
             break;
             case 2:
@@ -491,10 +579,11 @@ public class Archive
             list(activeMediums);
             System.out.println("\n"+"Select a medium by typing its index number.");
             int index = parser.getUserMenuSelection(maxSize);
+            Medium medium = activeMediums.getMedium(index);
             if(stringy.contains("edit"))
             {
                 clear();
-                editMediumSelect(index);
+                printEditMediumSelect(index);
             }
             
             else if(stringy.contains("add"))
@@ -507,6 +596,8 @@ public class Archive
         clear();
 
     }
+    
+    
     
     public String tellUsWhatToDo()
     {

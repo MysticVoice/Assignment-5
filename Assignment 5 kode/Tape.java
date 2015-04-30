@@ -18,6 +18,16 @@ public class Tape extends ExternalMedium
         this.title = title;
     }
     
+    public void setTitle(String title)
+    {
+        this.title=title;
+    }
+    
+    public void setDigital(boolean digital)
+    {
+        this.digital = digital;
+    }
+    
     public String getTitle()
     {
         return title;

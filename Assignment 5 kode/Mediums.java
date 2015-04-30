@@ -44,6 +44,20 @@ public class Mediums
         return result;
     }
     
+    public Medium getMediumWMedium(Medium medium)
+    {
+        Medium resultMedium = null;
+        for(int i=0;i<mediums.size();i++)
+        {
+            Medium tempMedium = mediums.get(i);
+            if(tempMedium == medium)
+            {
+                resultMedium = tempMedium;
+            }
+        }
+        return resultMedium;
+    }
+    
     /**
      * returns mediums
      */
