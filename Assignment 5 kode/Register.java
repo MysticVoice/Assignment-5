@@ -66,8 +66,7 @@ public class Register
         HDD disk;
         Tape tape;
         
-        SubTrack preTrack;
-        FileOnHDD track;
+        SubTrack track;
         // new medium
         cd = createCD("Wrecking Ball", "Bruce Springsteen", 2012, "Columbia");
         // tracks
@@ -202,22 +201,38 @@ public class Register
         disk = createHarddisk("the C");
         
         // track 
-        disk.addTrack(createMusicTrack("Stole the Show", "Kygo feat.Parson James", 3, 43));
-        disk.addTrack(createMusicTrack("Thinking Out Loud", "Ed Sheeran", 4, 41));
-        disk.addTrack(createMusicTrack("FourFiveSeconds", "Rihanna & Kanye West & Paul McCartney", 3, 8));
-        disk.addTrack(createMusicTrack("Leaving No Traces", "HighHasakite", 4, 21));
-        disk.addTrack(createMusicTrack("Dangerous", "David Guetta", 3, 23));
-        disk.addTrack(createMusicTrack("Am I Wrong", "Nico & Vinz", 4, 9));
-        disk.addTrack(createMusicTrack("Pet Cemetary", "DJ QUIK", 4, 6));
-        disk.addTrack(createMusicTrack("Dum Dum Minister", "Black Debbath", 4, 59));
-        disk.addTrack(createMusicTrack("Seven Hills", "While She Sleeps", 4, 20));
-        disk.addTrack(createMusicTrack("Scars", "Upon A Burning Body", 3, 45));
-        disk.addTrack(createMusicTrack("Fear Of Napalm", "Terrorizer", 3, 1));
-        disk.addTrack(createMusicTrack("Losing Sleep", "Comeback Kid", 2, 40));
-        disk.addTrack(createMusicTrack("Prophet", "Truckfighters", 4, 47));
-        disk.addTrack(createMusicTrack("Holy Matter", "Blood Suckers", 1, 39));
-        disk.addTrack(createMusicTrack("Human Filler", "Heksed", 1, 16));
-        disk.addTrack(createMusicTrack("One of These Days", "Die A Legend", 2, 51));
+        track = createMusicTrack("Stole the Show", "Kygo feat.Parson James", 3, 43);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Thinking Out Loud", "Ed Sheeran", 4, 41);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("FourFiveSeconds", "Rihanna & Kanye West & Paul McCartney", 3, 8);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Leaving No Traces", "HighHasakite", 4, 21);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Dangerous", "David Guetta", 3, 23);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Am I Wrong", "Nico & Vinz", 4, 9);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Pet Cemetary", "DJ QUIK", 4, 6);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Dum Dum Minister", "Black Debbath", 4, 59);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Seven Hills", "While She Sleeps", 4, 20);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Scars", "Upon A Burning Body", 3, 45);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Fear Of Napalm", "Terrorizer", 3, 1);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Losing Sleep", "Comeback Kid", 2, 40);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Prophet", "Truckfighters", 4, 47);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Holy Matter", "Blood Suckers", 1, 39);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("Human Filler", "Heksed", 1, 16);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
+        track = createMusicTrack("One of These Days", "Die A Legend", 2, 51);
+        disk.addTrack(createFileOnHDD(track, "unknown"));
          
        
         

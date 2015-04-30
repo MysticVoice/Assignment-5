@@ -59,9 +59,9 @@ public class Archive
             break;
             
             case 3:
-            printAddMediumMenu();
             clear();
-            
+            printAddMediumMenu();
+            printMainMenu();
             break;
             
             case 4:
@@ -315,11 +315,6 @@ public class Archive
         
     }
     
-    private void addMedium()
-    {
-        
-    }
-    
     private void printMainMenu()
     {
         String menuString = 
@@ -342,15 +337,57 @@ public class Archive
         System.out.print(menuString);
     }
     
+    private void addMediumMenu()
+    {
+        int key = parser.getUserMenuSelection(4);
+        switch(key)
+        {
+            case 1:
+            clear();
+            addCDParsing();
+            break;
+            case 2:
+            clear();
+            //addAdvertisingJingleParsing();
+            break;
+            case 3:
+            clear();
+            //addNewsParsing();
+            break;
+            case 4:
+            clear();
+            break;
+        }
+    }
+    
+    private void addCDParsing()
+    {
+        clear();
+        System.out.println("Type the album name.");
+        String album = parser.getStringidi();
+        clear();
+        System.out.println("Type the name of the artist.");
+        String artist = parser.getStringidi();
+        clear();
+        System.out.println("Type the year made.");
+        int year = parser.getUserMenuSelection(3000); 
+        clear();
+        System.out.println("Type the label.");
+        String label = parser.getStringidi();
+        
+        register.createCD(album, artist, year, label);
+    }
+    
     private void printAddMediumMenu()
     {
         String menuString = 
-        "\n"+"--- Main Menu ---" + "\n"
+        "\n"+"--- Add Medium ---" + "\n"
         +"1. Add CD" + "\n"
         +"2. Add Tape" + "\n"
         +"3. Add Harddisk" +"\n"
         +"4. Return" + "\n";
         System.out.print(menuString);
+        addMediumMenu();
     }
     
     private void printSearchMenu()
@@ -482,7 +519,7 @@ public class Archive
     public void list(Mediums mediums)
     {
         
-        String topThingie = "We found " + mediums.getSize() + " mediums." + "\n";
+        String topThingie = "We found " + mediums.getSize() + " medium(s)." + "\n";
         
         
         String mainString = mediums.getMediumPrintString();
