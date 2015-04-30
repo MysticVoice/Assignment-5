@@ -1,9 +1,8 @@
 #BlueJ class context
 comment0.params=title\ journalist\ min\ sec\ summary
 comment0.target=News(java.lang.String,\ java.lang.String,\ long,\ long,\ java.lang.String)
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ News\n
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ News\r\n
 comment1.params=
-<<<<<<< Updated upstream
 comment1.target=java.lang.String\ getDateMade()
 comment2.params=
 comment2.target=java.lang.String\ getDateBroadcasted()
@@ -25,20 +24,3 @@ comment8.params=journalist
 comment8.target=void\ setJournalist(java.lang.String)
 comment8.text=\r\n\ change\ dateBroadcasted\r\n
 numComments=9
-=======
-comment1.target=java.lang.String\ getSummary()
-comment1.text=\n\ returns\ the\ newsStory\ \n\ @return\ the\ newsStory\n
-comment2.params=
-comment2.target=java.lang.String\ getJournalist()
-comment2.text=\n\ returns\ the\ journalist\ \n\ @return\ the\ journalist\n
-comment3.params=newSummary
-comment3.target=void\ setSummary(java.lang.String)
-comment3.text=\n\ change\ times\ played\n
-comment4.params=
-comment4.target=java.util.Calendar\ date()
-comment4.text=\n\ change\ dateMade\n
-comment5.params=journalist
-comment5.target=void\ setJournalist(java.lang.String)
-comment5.text=\n\ change\ dateBroadcasted\n
-numComments=6
->>>>>>> Stashed changes

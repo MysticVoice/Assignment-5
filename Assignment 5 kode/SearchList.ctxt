@@ -1,17 +1,17 @@
 #BlueJ class context
 comment0.params=
 comment0.target=SearchList()
-comment0.text=\n\ Creates\ new\ form\ SearchList\n
+comment0.text=\r\n\ Creates\ new\ form\ SearchList\r\n
 comment1.params=
 comment1.target=void\ initComponents()
-comment1.text=\n\ This\ method\ is\ called\ from\ within\ the\ constructor\ to\ initialize\ the\ form.\n\ WARNING\:\ Do\ NOT\ modify\ this\ code.\ The\ content\ of\ this\ method\ is\ always\n\ regenerated\ by\ the\ Form\ Editor.\n
+comment1.text=\r\n\ This\ method\ is\ called\ from\ within\ the\ constructor\ to\ initialize\ the\ form.\r\n\ WARNING\:\ Do\ NOT\ modify\ this\ code.\ The\ content\ of\ this\ method\ is\ always\r\n\ regenerated\ by\ the\ Form\ Editor.\r\n
 comment2.params=
 comment2.target=int\ getSize()
 comment3.params=i
 comment3.target=java.lang.Object\ getElementAt(int)
 comment4.params=args
 comment4.target=void\ main(java.lang.String[])
-comment4.text=\n\ @param\ args\ the\ command\ line\ arguments\n
+comment4.text=\r\n\ @param\ args\ the\ command\ line\ arguments\r\n
 comment5.params=
 comment5.target=void\ run()
 numComments=6

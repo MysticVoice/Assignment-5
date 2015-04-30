@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=digital\ title
 comment0.target=Tape(boolean,\ java.lang.String)
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Tape\n
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tape\r\n
 comment1.params=
 comment1.target=java.lang.String\ getTitle()
 comment2.params=

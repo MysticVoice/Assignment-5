@@ -101,16 +101,16 @@ public class Archive
         {
             medium = medium2;
         }
-<<<<<<< Updated upstream
+
         if(medium != null)
         {System.out.print(medium.getLongDescription());}
         else
         {System.out.print("No results.");}
         System.out.println("");
-=======
+
         
         System.out.print(medium.getLongDescription());
->>>>>>> Stashed changes
+
         return medium;
         
     }

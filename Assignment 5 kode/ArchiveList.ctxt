@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.params=name\ archiveNumber\ mediums
 comment0.target=ArchiveList(java.lang.String,\ int,\ Mediums)
-comment0.text=\n\ Creates\ an\ archive\ which\ will\ distribute\ a\ selection\ of\ archive\ numbers\n
+comment0.text=\r\n\ Creates\ an\ archive\ which\ will\ distribute\ a\ selection\ of\ archive\ numbers\r\n
 comment1.params=medium
 comment1.target=void\ addMedium(Medium)
-comment1.text=\n\ Adds\ a\ medium\ to\ the\ first\ available\ index;\n
+comment1.text=\r\n\ Adds\ a\ medium\ to\ the\ first\ available\ index;\r\n
 comment2.params=
 comment2.target=boolean\ detectNull()
-comment2.text=\n\ detects\ the\ first\ available\ index\ in\ mediums\n
+comment2.text=\r\n\ detects\ the\ first\ available\ index\ in\ mediums\r\n
 comment3.params=medium
 comment3.target=void\ setNull(Medium)
-comment3.text=\n\ Gives\ a\ medium\ to\ mediums\ for\ nullification\n
+comment3.text=\r\n\ Gives\ a\ medium\ to\ mediums\ for\ nullification\r\n
 comment4.params=
 comment4.target=int\ getSpecific()
 comment5.params=
