@@ -165,7 +165,7 @@ public class Archive
     }
     
     /**
-     * Searches for cd with an artist string that contains the input string
+     * Searches for track by title
      */
     public Tracks searchByTitle()
     {
@@ -725,9 +725,9 @@ public class Archive
     {
         String menuString =
         "--- Search ---" + "\n"
-        + "1. Search by archive number" + "\n"
-        + "2. Search by title" + "\n"
-        + "3. Search by artist" + "\n"
+        + "1. Search by mediums archive number" + "\n"
+        + "2. Search by tracks title" + "\n"
+        + "3. Search by tracks artist" + "\n"
         + "4. Return to Main Menu" + "\n";
         System.out.print(menuString);
         
