@@ -283,6 +283,7 @@ public class Archive
         if(activeTracks.getSize() == 0)
         {System.out.print("No results.");}
         System.out.println("");
+        printTrackSelectFromActive();
         return activeTracks;
     }
     
@@ -801,7 +802,6 @@ public class Archive
             clear();
             System.out.println("List of Music.");
             listMusic();
-            editOrAdd();
             break;
             
             case 6:
@@ -847,6 +847,7 @@ public class Archive
         clear();
 
     }
+    
     
     /**
      * checks if a track is a file
@@ -1101,6 +1102,29 @@ public class Archive
     }
     
     /**
+     * selects which track to edit
+     */
+    private void trackSelectFromActive()
+    {
+        
+        boolean done = false;
+        int selected = parser.getUserMenuSelection(999);
+        if(selected < activeTracks.getSize())
+        {
+            clear();
+            Track track;
+            track = activeTracks.getTrack(selected);
+            System.out.println("Select which variable to edit."+ "\n");
+            checkIfFile(track);
+        }
+        else
+        {
+            System.out.print("Your input was not valid");
+        }
+    
+    }
+    
+    /**
      * prints instructions for track selection
      */
     private void printTrackSelect(int index)
@@ -1111,6 +1135,19 @@ public class Archive
         resultString = resultString + medium.getTracksDescriptionWIndex();
         System.out.print(resultString);
         trackSelect(medium);
+    }
+    
+    /**
+     * prints instructions for track selection
+     */
+    private void printTrackSelectFromActive()
+    {
+        String resultString = "";
+        
+        resultString = resultString + activeTracks.getTracksDescriptionWIndex();
+        resultString = resultString +"\n"+"To edit a track type its index number" + "\n";
+        System.out.print(resultString);
+        trackSelectFromActive();
     }
     
     /**

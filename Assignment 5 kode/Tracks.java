@@ -19,6 +19,19 @@ public class Tracks
         tracks = new ArrayList<Track>();
     }
     
+    public String getTracksDescriptionWIndex()
+    {
+        String returnString;
+        int size;
+        size = getSize();
+        returnString = "\n";
+        for(int i = 0; i<size; i++)
+        {
+            returnString +=i+". " + getTrack(i).getLongDescription() + "\n";
+        }
+        return returnString;
+    }
+    
     /**
      * returns a track
      */
