@@ -44,15 +44,15 @@ public class Parser
         while (!validInput) {
             try {
                 selection = reader.nextInt();
-                if ((selection <= max) && (selection > 0)) {
+                if ((selection <= max) && (selection >= 0)) {
                     validInput = true;
                 } else
                 {
-                    System.out.print("You must provide a number between 1 and " 
+                    System.out.print("You must provide a number between 0 and " 
                         + max + "\n>");
                 }
             } catch (InputMismatchException ime) {
-                System.out.print("Your input must be an integer (a positiv number)\n>");
+                System.out.print("Your input must be an integer (a positiv number) or zero \n>");
                 // Empty the Scanner
                 reader.next();
             }

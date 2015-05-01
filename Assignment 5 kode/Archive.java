@@ -26,6 +26,9 @@ public class Archive
         play();
     }
     
+    /**
+     * returns all medims in a single Mediums
+     */
     public Mediums allMediums()
     {
         Mediums allMediums = register.combineAllMediums();
@@ -33,9 +36,12 @@ public class Archive
         
     }
     
-    
+    /**
+     * keeps the program running
+     */
     public void play()
     {
+        clear();
         System.out.print("Hi folks, let's push some buttons" + "\n");
         printMainMenu();
         boolean finished = false;
@@ -46,6 +52,9 @@ public class Archive
         System.out.println("::::::::::::::::::::::::::::::::::::::::");
     }
     
+    /**
+     * simulates the main menu
+     */
     private boolean selectMenu()
     {
         boolean wantToQuit = false;
@@ -77,6 +86,9 @@ public class Archive
         return wantToQuit;
     }
     
+    /**
+     * Gets a mediums list from register
+     */
     public Mediums selectMediums(int index)
     {
         return register.getMediums(index);
@@ -90,6 +102,10 @@ public class Archive
         return mediums.getMediumsString();
     }
     
+    /**
+     * searches mediums by archive number
+     * returns a single medium
+     */
     public Medium searchArchive()
     {
         String input =  parser.getStringidi();
@@ -270,10 +286,13 @@ public class Archive
         return activeTracks;
     }
     
+    /**
+     * selects which track type to add
+     */
     private void selectTrackType(int index)
     {
         
-        int key = parser.getUserMenuSelection(5);
+        int key = parser.getUserMenuSelection(4);
         switch(key)
         {
             case 1:
@@ -296,6 +315,9 @@ public class Archive
         
     }
     
+    /**
+     * Creates a music track from TUI
+     */
     private void addMusicTrackParsing(int index)
     {
         clear();
@@ -326,6 +348,9 @@ public class Archive
         //cd.addTrack(createMusicTrack("Remnants", "Disturbed", 2, 43));
     }
     
+    /**
+     * Selects what type of edit menu to print and use
+     */
     private void printEditMediumSelect(int index)
     {
         String menuString =
@@ -362,6 +387,9 @@ public class Archive
         
     }
     
+    /**
+     * selects which field to edit
+     */
     private void editMediumSelectCD(int index)
     {
         Medium medium = activeMediums.getMedium(index);
@@ -403,6 +431,10 @@ public class Archive
         }
     }
     
+    
+    /**
+     * Prints main menu
+     */
     private void printMainMenu()
     {
         String menuString = 
@@ -414,6 +446,9 @@ public class Archive
         System.out.print(menuString);
     }
     
+    /**
+     * Prints a menu for adding tracks
+     */
     private void printAddTrackMenu()
     {
         String menuString = "\n" + "--- Add Track ---" + "\n"
@@ -425,6 +460,9 @@ public class Archive
         System.out.print(menuString);
     }
     
+    /**
+     * simulates menu for adding a medium
+     */
     private void addMediumMenu()
     {
         int key = parser.getUserMenuSelection(4);
@@ -448,6 +486,9 @@ public class Archive
         }
     }
     
+    /**
+     * adds a CD from TUI
+     */
     private void addCDParsing()
     {
         clear();
@@ -466,6 +507,9 @@ public class Archive
         register.createCD(album, artist, year, label);
     }
     
+    /**
+     * Prints a menu for adding a medium
+     */
     private void printAddMediumMenu()
     {
         String menuString = 
@@ -478,6 +522,9 @@ public class Archive
         addMediumMenu();
     }
     
+    /**
+     * prints a search menu
+     */
     private void printSearchMenu()
     {
         String menuString =
@@ -491,6 +538,9 @@ public class Archive
         searchChoise();
     }
     
+    /**
+     * simulates which search function to use
+     */
     public void searchChoise()
     {
         int key = parser.getUserMenuSelection(4);
@@ -517,6 +567,9 @@ public class Archive
         }
     }
     
+    /**
+     * choses which list to list
+     */
      public void listChoise()
     {
         int key = parser.getUserMenuSelection(6);
@@ -573,13 +626,12 @@ public class Archive
         int maxSize = activeMediums.getSize();
         String stringy = parser.getStringidi();
         stringy = stringy.toLowerCase();
-        if(stringy.contains("edit") || stringy.contains("add"))
+        if(stringy.contains("edit") || stringy.contains("add") || stringy.contains("open"))
         {
             clear();
             list(activeMediums);
             System.out.println("\n"+"Select a medium by typing its index number.");
             int index = parser.getUserMenuSelection(maxSize);
-            Medium medium = activeMediums.getMedium(index);
             if(stringy.contains("edit"))
             {
                 clear();
@@ -592,13 +644,285 @@ public class Archive
                 printAddTrackMenu();
                 selectTrackType(index);
             }
+            else if(stringy.contains("open"))
+            {
+                clear();
+                printTrackSelect(index);
+            }
         }
+        
         clear();
 
     }
     
+    /**
+     * checks if a track is a file
+     */
+    private void checkIfFile(Track track)
+    {
+        if(track instanceof FileOnHDD)
+        {
+            track = ((FileOnHDD)track).getTrack();
+        }
+        printEditTrack(track);
+    }
     
+    /**
+     * prints an edit track menu depending on type
+     */
+    private void printEditTrack(Track track)
+    {
+        String resultString = "Select a field to edit" + "\n";
+        if(track instanceof MusicTrack)
+        {
+            resultString = resultString 
+            + "1. Edit title." + "\n"
+            + "2. Edit artist." + "\n"
+            + "3. Edit duration." + "\n"
+            + "4. Play Track." + "\n"
+            + "5. Return to Main Menu." + "\n";
+            System.out.print(resultString);
+            editMusicTrack(track);
+        }
+        else if(track instanceof AdvertisingJingle)
+        {
+            resultString = resultString 
+            + "1. Edit title." + "\n"
+            + "2. Edit company." + "\n"
+            + "3. Edit duration." + "\n"
+            + "4. Edit product." + "\n"
+            + "5. Return to Main Menu." + "\n";
+            System.out.print(resultString);
+            editAdvertisingJingle(track);
+        }
+        else if(track instanceof News)
+        {
+            resultString = resultString 
+            + "1. Edit title." + "\n"
+            + "2. Edit summary." + "\n"
+            + "3. Edit duration." + "\n"
+            + "4. Broadcast" + "\n"
+            + "5. Return to Main Menu." + "\n";
+            System.out.print(resultString);
+            editNews(track);
+        }
+        else if(track instanceof SoundEffect)
+        {
+            resultString = resultString 
+            + "1. Edit title." + "\n"
+            + "2. Edit description." + "\n"
+            + "3. Edit duration." + "\n"
+            + "4. Return to Main Menu." + "\n";
+            System.out.print(resultString);
+            editSoundEffect(track);
+        }
+        
+    }
     
+    /**
+     * edits a sound effect from TUI
+     */
+    private void editSoundEffect(Track track)
+    {
+        int key = parser.getUserMenuSelection(4);
+        switch(key)
+        {
+            case 1:
+            clear();
+            System.out.println("Type a new title.");
+            String title = parser.getStringidi();
+            ((SubTrack)track).setTitle(title);
+            break;
+            case 2:
+            clear();
+            System.out.println("Type a new summary.");
+            String description = parser.getStringidi();
+            ((SoundEffect)track).setDescription(description);
+            break;
+            
+            case 3:
+            clear();
+            System.out.println("Type a new duration in minutes.");
+            long min = parser.getUserMenuSelection(60);
+            clear();
+            System.out.println("Type a new duration in seconds.");
+            long sec = parser.getUserMenuSelection(60);
+            ((SubTrack)track).setDuration(min, sec);
+            break;
+            
+            case 4:
+            clear();
+            break;
+            
+        }
+    }
+    
+    /**
+     * edits a news track from TUI
+     */
+    private void editNews(Track track)
+    {
+        int key = parser.getUserMenuSelection(5);
+        switch(key)
+        {
+            case 1:
+            clear();
+            System.out.println("Type a new title.");
+            String title = parser.getStringidi();
+            ((SubTrack)track).setTitle(title);
+            break;
+            case 2:
+            clear();
+            System.out.println("Type a new summary.");
+            String company = parser.getStringidi();
+            ((News)track).setSummary(company);
+            break;
+            
+            case 3:
+            clear();
+            System.out.println("Type a new duration in minutes.");
+            long min = parser.getUserMenuSelection(60);
+            clear();
+            System.out.println("Type a new duration in seconds.");
+            long sec = parser.getUserMenuSelection(60);
+            ((SubTrack)track).setDuration(min, sec);
+            break;
+            
+            case 4:
+            clear();
+            ((News)track).broadcast();
+            break;
+            
+            case 5:
+            clear();
+            break;
+        }
+    }
+    
+    /**
+     * edits an advertising jingle from TUI
+     */
+    private void editAdvertisingJingle(Track track)
+    {
+        int key = parser.getUserMenuSelection(5);
+        switch(key)
+        {
+            case 1:
+            clear();
+            System.out.println("Type a new title.");
+            String title = parser.getStringidi();
+            ((SubTrack)track).setTitle(title);
+            break;
+            case 2:
+            clear();
+            System.out.println("Type a new company name.");
+            String company = parser.getStringidi();
+            ((AdvertisingJingle)track).setCompany(company);
+            break;
+            
+            case 3:
+            clear();
+            System.out.println("Type a new duration in minutes.");
+            long min = parser.getUserMenuSelection(60);
+            clear();
+            System.out.println("Type a new duration in seconds.");
+            long sec = parser.getUserMenuSelection(60);
+            ((SubTrack)track).setDuration(min, sec);
+            break;
+            
+            case 4:
+            clear();
+            System.out.println("Type a new product name.");
+            String product = parser.getStringidi();
+            ((AdvertisingJingle)track).setProduct(product);
+            break;
+            
+            case 5:
+            clear();
+            break;
+        }
+    }
+    
+    /**
+     * edits a music track from TUI
+     */
+    private void editMusicTrack(Track track)
+    {
+        int key = parser.getUserMenuSelection(5);
+        switch(key)
+        {
+            case 1:
+            clear();
+            System.out.println("Type a new title.");
+            String title = parser.getStringidi();
+            ((SubTrack)track).setTitle(title);
+            break;
+            case 2:
+            clear();
+            System.out.println("Type a new artist name.");
+            String artist = parser.getStringidi();
+            ((MusicTrack)track).setArtist(artist);
+            break;
+            
+            case 3:
+            clear();
+            System.out.println("Type a new duration in minutes.");
+            long min = parser.getUserMenuSelection(60);
+            clear();
+            System.out.println("Type a new duration in seconds.");
+            long sec = parser.getUserMenuSelection(60);
+            ((SubTrack)track).setDuration(min, sec);
+            break;
+            case 4:
+            clear();
+            ((MusicTrack)track).play();
+            break;
+            
+            case 5:
+            clear();
+            break;
+        }
+    }
+    
+    /**
+     * selects which track to edit
+     */
+    private void trackSelect(Medium medium)
+    {
+        
+        boolean done = false;
+        int selected = parser.getUserMenuSelection(999);
+        if(selected < medium.getSize())
+        {
+            clear();
+            Track track;
+            track = medium.getTrack(selected);
+            System.out.println("Select which variable to edit."+ "\n");
+            checkIfFile(track);
+        }
+        else
+        {
+            System.out.print("Your input was not valid");
+        }
+    
+    }
+    
+    /**
+     * prints instructions for track selection
+     */
+    private void printTrackSelect(int index)
+    {
+        String resultString = 
+        "To edit a track type its index number" + "\n";
+        Medium medium = activeMediums.getMedium(index);
+        resultString = resultString + medium.getTracksDescriptionWIndex();
+        System.out.print(resultString);
+        trackSelect(medium);
+    }
+    
+    /**
+     * tells us how to use edit, add and open
+     */
     public String tellUsWhatToDo()
     {
         String resultString = "To edit an item type: Edit" + "\n"
@@ -607,6 +931,9 @@ public class Archive
         return resultString;
     }
     
+    /**
+     * lists mediums and tracks from selected Mediums
+     */
     public void list(Mediums mediums)
     {
         
@@ -620,7 +947,9 @@ public class Archive
         
     }
     
-    
+    /**
+     * prints listing options
+     */
     private void printListMenu()
     {
         String returnString =
@@ -635,6 +964,9 @@ public class Archive
         listChoise();
     }
     
+    /**
+     * removes text from window
+     */
     public final static void clear()
     {
         System.out.print('\u000C');

@@ -43,7 +43,7 @@ public class FileOnHDD extends Track
     
     public String getFilename()
     {
-        return filename;
+        return filename = track.getTitle();
     }
     
     public String getPath()

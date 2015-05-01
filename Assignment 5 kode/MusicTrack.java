@@ -11,7 +11,7 @@ import java.util.TimeZone;
  */
 public class MusicTrack extends SubTrack
 {
-       private String artist;
+    private String artist;
     private Calendar dateLastPlayed;
     private int timesPlayed;
 
@@ -59,7 +59,13 @@ public class MusicTrack extends SubTrack
     {
         this.timesPlayed = timesPlayed;
     }
-
+    
+    public void play()
+    {
+        setDate();
+        timesPlayed = timesPlayed+1;
+    }
+    
     /**
      * change artist
      */

@@ -15,17 +15,22 @@ public abstract class SubTrack extends Track
      */
     public SubTrack(String title,long min,long sec)
     {
-        this.duration = duration(min,sec);
+        this.duration = setDuration(min,sec);
         this.title = title;
     }
     
     /**
      * sets duration
      */
-    protected Duration duration(long min, long sec)
+    protected Duration setDuration(long min, long sec)
     { 
         Duration dur = Duration.ofSeconds(sec).plusMinutes(min);
         return dur;
+    }
+    
+    public void setTitle(String title)
+    {
+        this.title = title;
     }
     
     /**
@@ -43,4 +48,5 @@ public abstract class SubTrack extends Track
     {
         return duration;
     }
+    
 }

@@ -26,8 +26,14 @@ public class News extends SubTrack
         this.dateBroadcasted = date();
         this.journalist = journalist;
     }
+    
+    public void broadcast()
+    {
+        this.dateBroadcasted = date();
+    }
+    
     // accessors
-
+    
     public String getDateMade()
     {
         String returnString = "YEAR: " + dateMade.get(dateMade.YEAR);

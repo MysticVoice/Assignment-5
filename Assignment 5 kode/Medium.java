@@ -63,6 +63,19 @@ public class Medium
         return returnString;
     }
     
+    public String getTracksDescriptionWIndex()
+    {
+        String returnString;
+        int size;
+        size = tracks.getSize();
+        returnString = "\n";
+        for(int i = 0; i<size; i++)
+        {
+            returnString +=i+". " + tracks.getTrack(i).getLongDescription() + "\n";
+        }
+        return returnString;
+    }
+    
     public String getLongDescription(){return "";}
     
     /**
