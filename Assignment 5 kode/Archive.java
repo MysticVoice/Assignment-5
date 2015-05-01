@@ -374,7 +374,7 @@ public class Archive
             +"2. Edit digital." + "\n"
             +"3. Return to Main Menu." + "\n";
             System.out.println(menuString);
-            //editMediumSelectTape(index);
+            editMediumSelectTape(index);
         }
         else if(medium instanceof HDD)
         {
@@ -382,9 +382,66 @@ public class Archive
             +"1. Edit name." + "\n"
             +"2. Return to Main Menu." + "\n";
             System.out.println(menuString);
-            //editMediumSelectHDD(index);
+            editMediumSelectHDD(index);
         }
         
+    }
+    
+    /**
+     * selects which field to edit
+     */
+    private void editMediumSelectHDD(int index)
+    {
+        Medium medium = activeMediums.getMedium(index);
+        Mediums cds = register.getMediums(0);
+        int key = parser.getUserMenuSelection(3);
+        String input;
+        switch(key)
+        {
+            case 1:
+            clear();
+            System.out.println("Type a new name.");
+            input = parser.getStringidi();
+            ((HDD)medium).setName(input);
+            break;
+            case 2:
+            clear();
+            break;
+        }
+    }
+    
+    /**
+     * selects which field to edit
+     */
+    private void editMediumSelectTape(int index)
+    {
+        Medium medium = activeMediums.getMedium(index);
+        Mediums cds = register.getMediums(0);
+        int key = parser.getUserMenuSelection(3);
+        String input;
+        switch(key)
+        {
+            case 1:
+            clear();
+            System.out.println("Type a new title.");
+            input = parser.getStringidi();
+            ((Tape)medium).setTitle(input);
+            break;
+            case 2:
+            clear();
+            System.out.println("Type 1 if the tape is digital and 0 if not.");
+            int digitalInt = parser.getUserMenuSelection(1);
+            boolean digital = false;
+            if(digitalInt == 1)
+            {
+                digital = true;
+            }
+            ((Tape)medium).setDigital(digital);
+            break;
+            case 3:
+            clear();
+            break;
+        }
     }
     
     /**

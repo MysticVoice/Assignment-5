@@ -24,6 +24,11 @@ public class HDD extends Medium
         tracks.addTrack(track);
     }
     
+    public void setName(String input)
+    {
+        this.name = input;
+    }
+    
     public String getName()
     {
         return name;
