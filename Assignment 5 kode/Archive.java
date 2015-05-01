@@ -131,8 +131,10 @@ public class Archive
         {System.out.print("No results.");}
         System.out.println("");
 
-        
-        System.out.print(medium.getLongDescription());
+        if(medium != null)
+        {
+            System.out.print(medium.getLongDescription());
+        }
 
         return medium;
         
@@ -153,7 +155,7 @@ public class Archive
             if (arcNr >= listValue)
             {
                 int index = arcNr - listValue;
-                if(index <= listMediums.getSize())
+                if(index <= listMediums.getSize() && index>0)
                 {
                     medium = listMediums.getMedium(index);
                 }
