@@ -301,16 +301,122 @@ public class Archive
             break;
             case 2:
             clear();
-            //addAdvertisingJingleParsing(index);
+            addAdvertisingJingleParsing(index);
             break;
             case 3:
             clear();
-            //addNewsParsing(index);
+            addNewsParsing(index);
             break;
             case 4:
             clear();
-            //addSoundEffectParsing(index);
+            addSoundEffectParsing(index);
             break;
+        }
+        
+    }
+    
+    /**
+     * Creates a new sound effect from TUI
+     */
+    private void addSoundEffectParsing(int index)
+    {
+        clear();
+        System.out.println("Type the title.");
+        String title = parser.getStringidi();
+        clear();
+        System.out.println("Type the length in minutes");
+        long minutes = parser.getUserMenuSelection(60); 
+        System.out.println("Type the remaining length in seconds.");
+        long seconds = parser.getUserMenuSelection(60);
+        clear();
+        System.out.println("Type the description.");
+        String description = parser.getStringidi();
+        
+        Medium medium = activeMediums.getMedium(index);
+        
+        if(medium instanceof HDD)
+        {
+            clear();
+            System.out.println("Type the path for the file");
+            SubTrack track = register.createSoundEffect(title, minutes, seconds, description);
+            String path = parser.getStringidi();
+            medium.addTrack(register.createFileOnHDD(track, path));
+        }
+        else
+        {
+            medium.addTrack(register.createSoundEffect(title, minutes, seconds, description));
+        }
+    }
+    
+    /**
+     * Creates a new news track from TUI
+     */
+    private void addNewsParsing(int index)
+    {
+        clear();
+        System.out.println("Type the title.");
+        String title = parser.getStringidi();
+        clear();
+        System.out.println("Type the name of the journalist.");
+        String journalist = parser.getStringidi();
+        clear();
+        System.out.println("Type the length in minutes");
+        long minutes = parser.getUserMenuSelection(60); 
+        System.out.println("Type the remaining length in seconds.");
+        long seconds = parser.getUserMenuSelection(60);
+        clear();
+        System.out.println("Type the summary.");
+        String summary = parser.getStringidi();
+        
+        Medium medium = activeMediums.getMedium(index);
+        
+        if(medium instanceof HDD)
+        {
+            clear();
+            System.out.println("Type the path for the file");
+            SubTrack track = register.createNews(title, journalist, minutes, seconds, summary);
+            String path = parser.getStringidi();
+            medium.addTrack(register.createFileOnHDD(track, path));
+        }
+        else
+        {
+            medium.addTrack(register.createNews(title, journalist, minutes, seconds, summary));
+        }
+    }
+    
+    /**
+     * Creates a new advertising jingle from TUI
+     */
+    private void addAdvertisingJingleParsing(int index)
+    {
+        clear();
+        System.out.println("Type the title.");
+        String title = parser.getStringidi();
+        clear();
+        System.out.println("Type the name of the company.");
+        String company = parser.getStringidi();
+        clear();
+        System.out.println("Type the length in minutes");
+        long minutes = parser.getUserMenuSelection(60); 
+        System.out.println("Type the remaining length in seconds.");
+        long seconds = parser.getUserMenuSelection(60);
+        clear();
+        System.out.println("Type the name of the product.");
+        String product = parser.getStringidi();
+        
+        Medium medium = activeMediums.getMedium(index);
+        
+        if(medium instanceof HDD)
+        {
+            clear();
+            System.out.println("Type the path for the file");
+            SubTrack track = register.createAdvJingle(title, minutes, seconds, company, product);
+            String path = parser.getStringidi();
+            medium.addTrack(register.createFileOnHDD(track, path));
+        }
+        else
+        {
+            medium.addTrack(register.createAdvJingle(title, minutes, seconds, company, product));
         }
         
     }
@@ -344,8 +450,6 @@ public class Archive
         }
         
         medium.addTrack(register.createMusicTrack(title, artist, minutes, seconds));
-        
-        //cd.addTrack(createMusicTrack("Remnants", "Disturbed", 2, 43));
     }
     
     /**
@@ -531,16 +635,48 @@ public class Archive
             break;
             case 2:
             clear();
-            //addAdvertisingJingleParsing();
+            addTapeParsing();
             break;
             case 3:
             clear();
-            //addNewsParsing();
+            addHDDParsing();
             break;
             case 4:
             clear();
             break;
         }
+    }
+    
+    /**
+     * adds a HDD from TUI
+     */
+    private void addHDDParsing()
+    {
+        clear();
+        System.out.println("Type the HDD name.");
+        String name = parser.getStringidi();
+        clear();
+        
+        register.createHarddisk(name);
+    }
+    
+    /**
+     * adds a tape from TUI
+     */
+    private void addTapeParsing()
+    {
+        clear();
+        System.out.println("Type the title of the tape.");
+        String title = parser.getStringidi();
+        clear();
+        System.out.println("Type 1 to make a digital tape and 0 for analog.");
+        int digitalInt = parser.getUserMenuSelection(1); 
+        boolean digital = false;
+        if(digitalInt == 1)
+        {
+            digital = true;
+        }
+        register.createTape(digital, title);
     }
     
     /**
@@ -637,33 +773,33 @@ public class Archive
         {
             case 1:
             clear();
-            System.out.println(tellUsWhatToDo() + "List of all media and tracks");
+            System.out.println("List of all media and tracks");
             list(allMediums());
             editOrAdd();
             break;
             case 2:
             clear();
-            System.out.println(tellUsWhatToDo()+"List of CDs.");
+            System.out.println("List of CDs.");
             list(cds);
             editOrAdd();
             break;
             
             case 3:
             clear();
-            System.out.println(tellUsWhatToDo()+"List of Tapes.");
+            System.out.println("List of Tapes.");
             list(tapes);
             editOrAdd();
             break;
             case 4:
             clear();
-            System.out.println(tellUsWhatToDo()+"List of Harddisks.");
+            System.out.println("List of Harddisks.");
             list(harddisks);
             editOrAdd();
             break;
             
             case 5:
             clear();
-            System.out.println(tellUsWhatToDo()+"List of Music.");
+            System.out.println("List of Music.");
             listMusic();
             editOrAdd();
             break;
@@ -984,6 +1120,7 @@ public class Archive
     {
         String resultString = "To edit an item type: Edit" + "\n"
         +"To add a track type: Add" + "\n"
+        +"To open a medium type: Open" + "\n"
         +"Anything else will return you to Main Menu" + "\n";
         return resultString;
     }
@@ -1001,7 +1138,7 @@ public class Archive
         System.out.print(topThingie);
         System.out.print(mainString);
         activeMediums = mediums;
-        
+        System.out.println("\n"+tellUsWhatToDo());
     }
     
     /**

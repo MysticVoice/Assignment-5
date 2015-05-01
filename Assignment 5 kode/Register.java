@@ -318,7 +318,7 @@ public class Register
     /**
      * makes a new Tape
      */
-    private Tape createTape(boolean digital, String title)
+    public Tape createTape(boolean digital, String title)
     {
         Mediums tapes = mediumsList.get(2);
         Tape tape = new Tape(digital,title);
@@ -329,7 +329,7 @@ public class Register
     /**
      * makes a new harddisk
      */
-    private HDD createHarddisk(String name)
+    public HDD createHarddisk(String name)
     {
         Mediums harddisks = mediumsList.get(1);
         HDD harddisk = new HDD(name);
