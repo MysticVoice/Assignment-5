@@ -42,7 +42,7 @@ public class Archive
     public void play()
     {
         clear();
-        System.out.print("Archive initiated" + "\n");
+        System.out.print("Hi folks, let's push some buttons" + "\n");
         printMainMenu();
         boolean finished = false;
         while (!finished)

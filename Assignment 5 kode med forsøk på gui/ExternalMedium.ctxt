@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ExternalMedium()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ External\ medium\r\n
+comment1.params=archiveNr
+comment1.target=void\ setArchiveNr(int)
+comment1.text=\r\n\ sets\ the\ archive\ number\ of\ the\ Medium\r\n
+comment2.params=
+comment2.target=int\ getArchiveNr()
+comment2.text=\r\n\ returns\ archive\ number\r\n
+numComments=3

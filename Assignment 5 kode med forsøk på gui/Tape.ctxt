@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=digital\ title
+comment0.target=Tape(boolean,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tape\r\n
+comment1.params=title
+comment1.target=void\ setTitle(java.lang.String)
+comment2.params=digital
+comment2.target=void\ setDigital(boolean)
+comment3.params=
+comment3.target=java.lang.String\ getTitle()
+comment4.params=
+comment4.target=java.lang.String\ getText()
+comment5.params=
+comment5.target=java.lang.String\ getDigitalString()
+comment6.params=
+comment6.target=java.lang.String\ getLongDescription()
+numComments=7

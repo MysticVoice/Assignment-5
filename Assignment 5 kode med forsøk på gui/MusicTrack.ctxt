@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=title\ artist\ min\ sec
+comment0.target=MusicTrack(java.lang.String,\ java.lang.String,\ long,\ long)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ MusicTrack\r\n
+comment1.params=
+comment1.target=java.lang.String\ getArtist()
+comment1.text=\r\n\ returns\ artist\r\n
+comment2.params=
+comment2.target=int\ getTimesPlayed()
+comment2.text=\r\n\ returns\ timesPlayed\r\n
+comment3.params=
+comment3.target=java.util.Calendar\ setDate()
+comment4.params=timesPlayed
+comment4.target=void\ setTimesPlayed(int)
+comment4.text=\r\n\ change\ times\ played\r\n
+comment5.params=
+comment5.target=void\ play()
+comment6.params=artist
+comment6.target=void\ setArtist(java.lang.String)
+comment6.text=\r\n\ change\ artist\r\n
+comment7.params=
+comment7.target=java.lang.String\ getDateLastPlayed()
+comment8.params=
+comment8.target=java.lang.String\ getLongDescription()
+numComments=9
